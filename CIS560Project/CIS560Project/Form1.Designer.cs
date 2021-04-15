@@ -29,18 +29,22 @@ namespace CIS560Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.uxSearchTextbox = new System.Windows.Forms.TextBox();
             this.uxSearchButton = new System.Windows.Forms.Button();
             this.uxTopTenListView = new System.Windows.Forms.ListView();
+            this.uxSearchTabControl = new System.Windows.Forms.TabControl();
+            this.uxMoviesTab = new System.Windows.Forms.TabPage();
+            this.uxTheatersTab = new System.Windows.Forms.TabPage();
+            this.uxSearchTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // uxSearchTextbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(45, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(677, 49);
-            this.textBox1.TabIndex = 0;
+            this.uxSearchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 62);
+            this.uxSearchTextbox.Name = "uxSearchTextbox";
+            this.uxSearchTextbox.Size = new System.Drawing.Size(677, 49);
+            this.uxSearchTextbox.TabIndex = 0;
             // 
             // uxSearchButton
             // 
@@ -56,22 +60,56 @@ namespace CIS560Project
             // 
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(701, 177);
+            this.uxTopTenListView.Location = new System.Drawing.Point(701, 184);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(292, 518);
+            this.uxTopTenListView.Size = new System.Drawing.Size(292, 511);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // uxSearchTabControl
+            // 
+            this.uxSearchTabControl.Controls.Add(this.uxMoviesTab);
+            this.uxSearchTabControl.Controls.Add(this.uxTheatersTab);
+            this.uxSearchTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchTabControl.Location = new System.Drawing.Point(45, 133);
+            this.uxSearchTabControl.Name = "uxSearchTabControl";
+            this.uxSearchTabControl.SelectedIndex = 0;
+            this.uxSearchTabControl.Size = new System.Drawing.Size(615, 561);
+            this.uxSearchTabControl.TabIndex = 4;
+            // 
+            // uxMoviesTab
+            // 
+            this.uxMoviesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMoviesTab.Location = new System.Drawing.Point(8, 51);
+            this.uxMoviesTab.Name = "uxMoviesTab";
+            this.uxMoviesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uxMoviesTab.Size = new System.Drawing.Size(599, 502);
+            this.uxMoviesTab.TabIndex = 0;
+            this.uxMoviesTab.Text = "Movies";
+            this.uxMoviesTab.UseVisualStyleBackColor = true;
+            // 
+            // uxTheatersTab
+            // 
+            this.uxTheatersTab.Location = new System.Drawing.Point(8, 51);
+            this.uxTheatersTab.Name = "uxTheatersTab";
+            this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uxTheatersTab.Size = new System.Drawing.Size(599, 502);
+            this.uxTheatersTab.TabIndex = 1;
+            this.uxTheatersTab.Text = "Theaters";
+            this.uxTheatersTab.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 746);
+            this.Controls.Add(this.uxSearchTabControl);
             this.Controls.Add(this.uxTopTenListView);
             this.Controls.Add(this.uxSearchButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.uxSearchTextbox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.uxSearchTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,9 +117,12 @@ namespace CIS560Project
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox uxSearchTextbox;
         private System.Windows.Forms.Button uxSearchButton;
         private System.Windows.Forms.ListView uxTopTenListView;
+        private System.Windows.Forms.TabControl uxSearchTabControl;
+        private System.Windows.Forms.TabPage uxMoviesTab;
+        private System.Windows.Forms.TabPage uxTheatersTab;
     }
 }
 
