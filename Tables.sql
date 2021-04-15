@@ -1,17 +1,17 @@
 CREATE SCHEMA [Movies] AUTHORIZATION [dbo];
 GO
 
+DROP TABLE IF EXISTS Movies.MovieGenre
+DROP TABLE IF EXISTS Movies.MovieReview
+DROP TABLE IF EXISTS Movies.MovieTheater
+DROP TABLE IF EXISTS Movies.MovieDirector
+DROP TABLE IF EXISTS Movies.MovieActor
 DROP TABLE IF EXISTS Movies.Movie
 DROP TABLE IF EXISTS Movies.Theater
 DROP TABLE IF EXISTS Movies.Director
 DROP TABLE IF EXISTS Movies.Actor
 DROP TABLE IF EXISTS Movies.Genre
 DROP TABLE IF EXISTS Movies.Reviewer
-DROP TABLE IF EXISTS Movies.MovieGenre
-DROP TABLE IF EXISTS Movies.MovieReview
-DROP TABLE IF EXISTS Movies.MovieTheater
-DROP TABLE IF EXISTS Movies.MovieDirector
-DROP TABLE IF EXISTS Movies.MovieActor
 
 CREATE TABLE Movies.Movie
 (
@@ -56,5 +56,62 @@ CREATE TABLE Movies.Reviewer
 
 CREATE TABLE Movies.MovieGenre
 (
-    
+    MovieId INT NOT NULL,
+    GenreId INT NOT NULL,
+
+    FOREIGN KEY(MovieId)
+    REFERENCES Movies.Movie(MovieId),
+    FOREIGN KEY(GenreId)
+    REFERENCES Movies.Genre(GenreId)
+)
+
+CREATE TABLE Movies.MovieReview
+(
+    MovieId INT NOT NULL,
+    ReviewerId INT NOT NULL,
+    Score FLOAT,
+
+    FOREIGN KEY(MovieId)
+    REFERENCES Movies.Movie(MovieId),
+    FOREIGN KEY(ReviewerId)
+    REFERENCES Movies.Reviewer(ReviewerId)
+)
+
+CREATE TABLE Movies.MovieDirector
+(
+    MovieId INT NOT NULL,
+    DirectorId INT NOT NULL,
+    Salary INT
+
+    FOREIGN KEY(MovieId)
+    REFERENCES Movies.Movie(MovieId),
+    FOREIGN KEY(DirectorId)
+    REFERENCES Movies.Director(DirectorId)
+)
+
+CREATE TABLE Movies.MovieActor
+(
+    MovieId INT NOT NULL,
+    ActorId INT NOT NULL,
+    Salary INT NOT NULL,
+
+    FOREIGN KEY(MovieId)
+    REFERENCES Movies.Movie(MovieId),
+    FOREIGN KEY(ActorId)
+    REFERENCES Movies.Actor(ActorId)
+)
+
+CREATE TABLE Movies.MovieTheater
+(
+    MovieId INT NOT NULL,
+    TheaterId INT NOT NULL,
+    TicketsSold INT,
+    --Remember to figure out showtimes for this table
+    ShowingFromDate DATE,
+    ShowingToDate DATE,
+
+    FOREIGN KEY(MovieId)
+    REFERENCES Movies.Movie(MovieId),
+    FOREIGN KEY(TheaterId)
+    REFERENCES Movies.Theater(TheaterId)
 )
