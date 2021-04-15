@@ -17,7 +17,7 @@ CREATE TABLE Movies.Movie
 (
     MovieId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     MovieTitle NVARCHAR(128) NOT NULL,
-    Rating FLOAT,
+    Rating NVARCHAR(32),
     RuntimeMinutes INT,
     ReleaseDate DATE
 )
@@ -25,6 +25,7 @@ CREATE TABLE Movies.Movie
 CREATE TABLE Movies.Theater
 (
     TheaterId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    TheaterName NVARCHAR(64) NOT NULL,
     TicketPrice FLOAT NOT NULL
 )
 
