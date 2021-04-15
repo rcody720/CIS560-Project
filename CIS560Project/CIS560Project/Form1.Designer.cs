@@ -35,7 +35,10 @@ namespace CIS560Project
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
+            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxSearchTabControl.SuspendLayout();
+            this.uxTheatersTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // uxSearchTextbox
@@ -90,6 +93,8 @@ namespace CIS560Project
             // 
             // uxTheatersTab
             // 
+            this.uxTheatersTab.Controls.Add(this.uxDateLabel);
+            this.uxTheatersTab.Controls.Add(this.uxDatePicker);
             this.uxTheatersTab.Location = new System.Drawing.Point(8, 51);
             this.uxTheatersTab.Name = "uxTheatersTab";
             this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
@@ -97,6 +102,25 @@ namespace CIS560Project
             this.uxTheatersTab.TabIndex = 1;
             this.uxTheatersTab.Text = "Theaters";
             this.uxTheatersTab.UseVisualStyleBackColor = true;
+            // 
+            // uxDatePicker
+            // 
+            this.uxDatePicker.Location = new System.Drawing.Point(35, 89);
+            this.uxDatePicker.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.uxDatePicker.MinDate = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
+            this.uxDatePicker.Name = "uxDatePicker";
+            this.uxDatePicker.Size = new System.Drawing.Size(339, 44);
+            this.uxDatePicker.TabIndex = 0;
+            // 
+            // uxDateLabel
+            // 
+            this.uxDateLabel.AutoSize = true;
+            this.uxDateLabel.Location = new System.Drawing.Point(31, 22);
+            this.uxDateLabel.Name = "uxDateLabel";
+            this.uxDateLabel.Size = new System.Drawing.Size(93, 37);
+            this.uxDateLabel.TabIndex = 1;
+            this.uxDateLabel.Text = "Date:";
+            this.uxDateLabel.UseMnemonic = false;
             // 
             // Form1
             // 
@@ -110,6 +134,8 @@ namespace CIS560Project
             this.Name = "Form1";
             this.Text = "Form1";
             this.uxSearchTabControl.ResumeLayout(false);
+            this.uxTheatersTab.ResumeLayout(false);
+            this.uxTheatersTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +149,8 @@ namespace CIS560Project
         private System.Windows.Forms.TabControl uxSearchTabControl;
         private System.Windows.Forms.TabPage uxMoviesTab;
         private System.Windows.Forms.TabPage uxTheatersTab;
+        private System.Windows.Forms.Label uxDateLabel;
+        private System.Windows.Forms.DateTimePicker uxDatePicker;
     }
 }
 
