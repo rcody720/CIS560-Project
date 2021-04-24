@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Person.CreatePerson
+CREATE OR ALTER PROCEDURE Movies.CreateMovie
    @MovieName NVARCHAR(32),
    @Rating NVARCHAR(32),
    @RunTime INT,
