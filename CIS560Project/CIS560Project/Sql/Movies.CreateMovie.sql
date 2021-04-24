@@ -6,7 +6,7 @@ CREATE OR ALTER PROCEDURE Movies.CreateMovie
    @MovieId INT OUTPUT
 AS
 
-INSERT Movies.Movie(MovieName, Rating, RunTime, ReleaseDate)
+INSERT Movies.Movie(MovieTitle, Rating, RuntimeMinutes, ReleaseDate)
 VALUES(@MovieName, @Rating, @RunTime, @ReleaseDate);
 
 SET @MovieId = SCOPE_IDENTITY();

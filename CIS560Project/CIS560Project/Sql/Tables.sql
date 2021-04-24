@@ -107,7 +107,7 @@ CREATE TABLE Movies.MovieTheater
     MovieId INT NOT NULL,
     TheaterId INT NOT NULL,
     TicketsSold INT,
-    --Remember to figure out showtimes for this table
+    ShowTime NVARCHAR(32),
     ShowingFromDate DATE,
     ShowingToDate DATE,
 

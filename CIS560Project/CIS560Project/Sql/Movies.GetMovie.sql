@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE Movies.GetMovie
    @MovieName NVARCHAR(128)
 AS
 
-SELECT M.MovieName, M.Rating, M.RunTime, M.ReleaseDate
+SELECT M.MovieTitle, M.Rating, M.RuntimeMinutes, M.ReleaseDate
 FROM Movies.Movie M
-WHERE M.MovieName = @MovieName;
+WHERE M.MovieTitle = @MovieName;
 GO
