@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,9 @@
   <ItemGroup>
     <Content Include="Sql\Data.sql" />
     <Content Include="Sql\Movies.CreateMovie.sql" />
+    <Content Include="Sql\Movies.FetchMovie.sql" />
+    <Content Include="Sql\Movies.GetMovie.sql" />
+    <Content Include="Sql\Movies.RetrieveMovies.sql" />
     <Content Include="Sql\Tables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

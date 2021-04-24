@@ -40,7 +40,8 @@ namespace CIS560Project
 
         public Movie FetchMovie(int movieId)
         {
-            throw new NotImplementedException();
+            var d = new FetchMovieDataDelegate(movieId);
+            return executor.ExecuteReader(d);
         }
 
         public Movie GetMovie(string movieName)
