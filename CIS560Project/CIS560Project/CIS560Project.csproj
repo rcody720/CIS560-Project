@@ -56,6 +56,11 @@
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieActor.cs" />
+    <Compile Include="Models\MovieDirector.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
+    <Compile Include="Models\MovieReview.cs" />
+    <Compile Include="Models\MovieTheater.cs" />
     <Compile Include="Models\Reviewer.cs" />
     <Compile Include="Models\Theater.cs" />
     <Compile Include="Program.cs" />
