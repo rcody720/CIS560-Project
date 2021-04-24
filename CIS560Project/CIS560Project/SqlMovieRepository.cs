@@ -52,7 +52,8 @@ namespace CIS560Project
 
         public IReadOnlyList<Movie> RetrieveMovies()
         {
-            throw new NotImplementedException();
+            var d = new RetrieveMoviesDataDelegate();
+            return executor.ExecuteReader(d);
         }
     }
 }
