@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIS560Project", "CIS560Project\CIS560Project.csproj", "{53F91F4F-7B95-4218-BF45-3330ED33F167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{63A2CF16-0EAE-40D3-8299-55CDEAE4B1EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{649AAC73-2627-4A5B-B6ED-949D4C5C9081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{53F91F4F-7B95-4218-BF45-3330ED33F167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53F91F4F-7B95-4218-BF45-3330ED33F167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53F91F4F-7B95-4218-BF45-3330ED33F167}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63A2CF16-0EAE-40D3-8299-55CDEAE4B1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63A2CF16-0EAE-40D3-8299-55CDEAE4B1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63A2CF16-0EAE-40D3-8299-55CDEAE4B1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63A2CF16-0EAE-40D3-8299-55CDEAE4B1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649AAC73-2627-4A5B-B6ED-949D4C5C9081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649AAC73-2627-4A5B-B6ED-949D4C5C9081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649AAC73-2627-4A5B-B6ED-949D4C5C9081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649AAC73-2627-4A5B-B6ED-949D4C5C9081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
