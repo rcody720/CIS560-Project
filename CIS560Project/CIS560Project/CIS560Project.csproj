@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetMovieDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
