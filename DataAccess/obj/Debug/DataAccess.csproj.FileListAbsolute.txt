@@ -1,0 +1,6 @@
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\DataAccess\obj\Debug\DataAccess.pdb

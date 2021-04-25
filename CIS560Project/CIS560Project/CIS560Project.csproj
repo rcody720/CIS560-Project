@@ -109,7 +109,7 @@
     <Content Include="Sql\Movies.FetchMovie.sql" />
     <Content Include="Sql\Movies.GetMovie.sql" />
     <Content Include="Sql\Movies.RetrieveMovies.sql" />
-    <Content Include="Sql\ReportQuery1.sql" />
+    <Content Include="Sql\Movies.GetRecentMovies.sql" />
     <Content Include="Sql\Tables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

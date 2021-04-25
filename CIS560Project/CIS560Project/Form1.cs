@@ -13,7 +13,7 @@ namespace CIS560Project
 {
     public partial class Form1 : Form
     {
-        private SqlMovieRepository repo = new SqlMovieRepository(@"Server=mssql.cs.ksu.;Database=CIS560;Integrated Security=SSPI;");
+        private SqlMovieRepository repo = new SqlMovieRepository(@"Server=mssql.cs.ksu.edu;Database=rcody720;User ID=rcody720;Password=@dr93/cr99&Kr60&Cr53;Integrated Security=False;");
         public Form1()
         {
             InitializeComponent();

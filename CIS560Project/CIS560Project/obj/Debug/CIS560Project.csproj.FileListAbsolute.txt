@@ -14,3 +14,17 @@ C:\Users\tayle\Desktop\College Work\Database System\CIS560-Project\CIS560Project
 C:\Users\tayle\Desktop\College Work\Database System\CIS560-Project\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csproj.GenerateResource.cache
 C:\Users\tayle\Desktop\College Work\Database System\CIS560-Project\CIS560Project\CIS560Project\obj\Debug\CIS560Project.exe
 C:\Users\tayle\Desktop\College Work\Database System\CIS560-Project\CIS560Project\CIS560Project\obj\Debug\CIS560Project.pdb
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.Form1.resources
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.Properties.Resources.resources
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csproj.GenerateResource.cache
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csproj.CoreCompileInputs.cache
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\CIS560Project.exe.config
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\CIS560Project.exe
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\CIS560Project.pdb
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\DataAccess.exe
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\DataAccess.pdb
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\bin\Debug\DataAccess.exe.config
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csprojAssemblyReference.cache
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csproj.CopyComplete
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.exe
+C:\Users\rcody720\source\repos\CIS560-Project\Movies1\CIS560Project\CIS560Project\obj\Debug\CIS560Project.pdb
