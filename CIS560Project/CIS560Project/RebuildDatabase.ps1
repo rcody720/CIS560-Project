@@ -20,34 +20,31 @@ Write-Host "Rebuilding database $Database on $Server..."
 <#
    If on your local machine, you can drop and re-create the database.
 #>
-& ".\Scripts\DropDatabase.ps1" -Database $Database
-& ".\Scripts\CreateDatabase.ps1" -Database $Database
+#& ".\Scripts\DropDatabase.ps1" -Database $Database
+#& ".\Scripts\CreateDatabase.ps1" -Database $Database
 
 <#
    If on the department's server, you don't have permissions to drop or create databases.
    In this case, maintain a script to drop all tables.
 #>
 Write-Host "Dropping tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\DropTables.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\DropTables.sql"
 
 Write-Host "Creating schema..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Schemas\Person.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.sql"
 
 Write-Host "Creating tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Person.Person.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Person.AddressType.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Person.PersonAddress.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Tables.sql"
 
 Write-Host "Stored procedures..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.CreatePerson.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrievePersons.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.FetchPerson.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.GetPerson.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.SavePersonAddress.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrieveAddressesForPerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.CreateMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.FetchMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.GetMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.GetRecentMovies.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.RetrieveMovies.sql"
 
 Write-Host "Inserting data..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Person.AddressType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Data.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""

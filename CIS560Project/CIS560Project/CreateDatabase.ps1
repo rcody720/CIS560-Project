@@ -1,7 +1,7 @@
 [cmdletbinding()]
 Param(
     [string] $Server = "mssql.cs.ksu.edu",
-    [string] $Database
+    [string] $Database = rcody720
 )
 
 $CurrentDrive = (Get-Location).Drive.Name + ":"

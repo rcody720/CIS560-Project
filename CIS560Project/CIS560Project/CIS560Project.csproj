@@ -84,6 +84,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CreateDatabase.ps1" />
+    <None Include="DropDatabase.ps1" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +95,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RebuildDatabase.ps1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -104,12 +107,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreateDatabase.sql" />
     <Content Include="Sql\Data.sql" />
+    <Content Include="Sql\DropTables.sql" />
     <Content Include="Sql\Movies.CreateMovie.sql" />
     <Content Include="Sql\Movies.FetchMovie.sql" />
     <Content Include="Sql\Movies.GetMovie.sql" />
     <Content Include="Sql\Movies.RetrieveMovies.sql" />
     <Content Include="Sql\Movies.GetRecentMovies.sql" />
+    <Content Include="Sql\Movies.sql" />
     <Content Include="Sql\Tables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
