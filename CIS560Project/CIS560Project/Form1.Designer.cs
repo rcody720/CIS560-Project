@@ -37,14 +37,18 @@ namespace CIS560Project
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.uxMovieIdTextbox = new System.Windows.Forms.TextBox();
+            this.uxMovieIdLabel = new System.Windows.Forms.Label();
+            this.uxSearchLabel = new System.Windows.Forms.Label();
             this.uxSearchTabControl.SuspendLayout();
+            this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // uxSearchTextbox
             // 
             this.uxSearchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 50);
+            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 72);
             this.uxSearchTextbox.Name = "uxSearchTextbox";
             this.uxSearchTextbox.Size = new System.Drawing.Size(677, 28);
             this.uxSearchTextbox.TabIndex = 0;
@@ -83,6 +87,8 @@ namespace CIS560Project
             // 
             // uxMoviesTab
             // 
+            this.uxMoviesTab.Controls.Add(this.uxMovieIdLabel);
+            this.uxMoviesTab.Controls.Add(this.uxMovieIdTextbox);
             this.uxMoviesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxMoviesTab.Location = new System.Drawing.Point(4, 29);
             this.uxMoviesTab.Name = "uxMoviesTab";
@@ -107,7 +113,7 @@ namespace CIS560Project
             // uxDateLabel
             // 
             this.uxDateLabel.AutoSize = true;
-            this.uxDateLabel.Location = new System.Drawing.Point(31, 22);
+            this.uxDateLabel.Location = new System.Drawing.Point(31, 31);
             this.uxDateLabel.Name = "uxDateLabel";
             this.uxDateLabel.Size = new System.Drawing.Size(48, 20);
             this.uxDateLabel.TabIndex = 1;
@@ -123,11 +129,39 @@ namespace CIS560Project
             this.uxDatePicker.Size = new System.Drawing.Size(339, 26);
             this.uxDatePicker.TabIndex = 0;
             // 
+            // uxMovieIdTextbox
+            // 
+            this.uxMovieIdTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieIdTextbox.Location = new System.Drawing.Point(59, 48);
+            this.uxMovieIdTextbox.Name = "uxMovieIdTextbox";
+            this.uxMovieIdTextbox.Size = new System.Drawing.Size(191, 29);
+            this.uxMovieIdTextbox.TabIndex = 0;
+            // 
+            // uxMovieIdLabel
+            // 
+            this.uxMovieIdLabel.AutoSize = true;
+            this.uxMovieIdLabel.Location = new System.Drawing.Point(55, 25);
+            this.uxMovieIdLabel.Name = "uxMovieIdLabel";
+            this.uxMovieIdLabel.Size = new System.Drawing.Size(75, 20);
+            this.uxMovieIdLabel.TabIndex = 1;
+            this.uxMovieIdLabel.Text = "Movie ID:";
+            // 
+            // uxSearchLabel
+            // 
+            this.uxSearchLabel.AutoSize = true;
+            this.uxSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchLabel.Location = new System.Drawing.Point(45, 45);
+            this.uxSearchLabel.Name = "uxSearchLabel";
+            this.uxSearchLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxSearchLabel.TabIndex = 5;
+            this.uxSearchLabel.Text = "Search:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 746);
+            this.Controls.Add(this.uxSearchLabel);
             this.Controls.Add(this.uxSearchTabControl);
             this.Controls.Add(this.uxTopTenListView);
             this.Controls.Add(this.uxSearchButton);
@@ -135,6 +169,8 @@ namespace CIS560Project
             this.Name = "Form1";
             this.Text = "Form1";
             this.uxSearchTabControl.ResumeLayout(false);
+            this.uxMoviesTab.ResumeLayout(false);
+            this.uxMoviesTab.PerformLayout();
             this.uxTheatersTab.ResumeLayout(false);
             this.uxTheatersTab.PerformLayout();
             this.ResumeLayout(false);
@@ -152,6 +188,9 @@ namespace CIS560Project
         private System.Windows.Forms.TabPage uxTheatersTab;
         private System.Windows.Forms.Label uxDateLabel;
         private System.Windows.Forms.DateTimePicker uxDatePicker;
+        private System.Windows.Forms.Label uxMovieIdLabel;
+        private System.Windows.Forms.TextBox uxMovieIdTextbox;
+        private System.Windows.Forms.Label uxSearchLabel;
     }
 }
 
