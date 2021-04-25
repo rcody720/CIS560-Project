@@ -29,8 +29,19 @@ namespace CIS560Project
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            Movie result = repo.GetMovie(uxSearchTextbox.Text);
-            MessageBox.Show(string.Format($"Movie: {0}\n Rating: {1}\nRunTime: {2}\nReleaseDate: {3}", result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
+            if(uxSearchTextbox.Text != null)
+            {
+                Movie result = repo.GetMovie(uxSearchTextbox.Text);
+                MessageBox.Show(string.Format($"Movie: {0}\n Rating: {1}\nRunTime: {2}\nReleaseDate: {3}",
+                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
+            }
+            else if (uxMovieIdTextbox.Text != null)
+            {
+                Movie result = repo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
+                MessageBox.Show(string.Format($"Movie: {0}\n Rating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
+                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
+            }
+            
         }
     }
 }
