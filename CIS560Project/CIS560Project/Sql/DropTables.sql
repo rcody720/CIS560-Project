@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS Movies.MovieGenre
+DROP TABLE IF EXISTS Movies.MovieReview
+DROP TABLE IF EXISTS Movies.MovieTheater
+DROP TABLE IF EXISTS Movies.MovieDirector
+DROP TABLE IF EXISTS Movies.MovieActor
+DROP TABLE IF EXISTS Movies.Movie
+DROP TABLE IF EXISTS Movies.Theater
+DROP TABLE IF EXISTS Movies.Director
+DROP TABLE IF EXISTS Movies.Actor
+DROP TABLE IF EXISTS Movies.Genre
+DROP TABLE IF EXISTS Movies.Reviewer
