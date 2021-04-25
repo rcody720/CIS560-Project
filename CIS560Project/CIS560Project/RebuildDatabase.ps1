@@ -28,25 +28,27 @@ Write-Host "Rebuilding database $Database on $Server..."
    In this case, maintain a script to drop all tables.
 #>
 Write-Host "Dropping tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\DropTables.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\DropTables.sql"
 
 Write-Host "Creating schema..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.sql"
 
 Write-Host "Creating tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Tables.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.sql"
 
 Write-Host "Stored procedures..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.CreateMovie.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.FetchMovie.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.GetMovie.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.GetRecentMovies.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Movies.RetrieveMovies.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.CreateMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.FetchMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.GetMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.GetRecentMovies.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.RetrieveMovies.sql"
 
 Write-Host "Inserting data..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "CIS560Project\Sql\Data.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -InputFile "C:\Users\rcody720\source\repos\Movies\CIS560Project\CIS560Project\Sql\Movies.RetrieveMovies.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""
 
 Set-Location $CurrentDrive
+
+Read-Host -Prompt "Press Enter to exit"
