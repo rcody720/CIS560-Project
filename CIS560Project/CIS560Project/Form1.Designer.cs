@@ -58,6 +58,7 @@ namespace CIS560Project
             this.uxSearchButton.TabIndex = 1;
             this.uxSearchButton.Text = "Search";
             this.uxSearchButton.UseVisualStyleBackColor = true;
+            this.uxSearchButton.Click += new System.EventHandler(this.uxSearchButton_Click);
             // 
             // uxTopTenListView
             // 

@@ -1,7 +1,7 @@
 [cmdletbinding()]
 Param(
     [string] $Server = "mssql.cs.ksu.edu",
-    [string] $Database
+    [string] $Database = "rcody720"
 )
 
 $Sql = @"
@@ -22,4 +22,6 @@ END;
 
 Write-Host "Dropping $Database database"
 
-Invoke-Sqlcmd -ServerInstance $Server -Database "master" -Query $Sql -Variable "DatabaseName=$Database"
+Invoke-Sqlcmd -ServerInstance $Server -Database "master" -Username rcody720 -Password @dr93/cr99"&"Kr60"&"Cr53 -Query $Sql -Variable "DatabaseName=$Database"
+
+Read-Host -Prompt "Press Enter to exit"
