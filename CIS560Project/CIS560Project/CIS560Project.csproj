@@ -84,8 +84,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CreateDatabase.ps1" />
-    <None Include="DropDatabase.ps1" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,7 +105,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreateDatabase.sql" />
     <Content Include="Sql\Data.sql" />
     <Content Include="Sql\DropTables.sql" />
     <Content Include="Sql\Movies.CreateMovie.sql" />
