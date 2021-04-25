@@ -35,8 +35,8 @@ namespace CIS560Project
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
-            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxDateLabel = new System.Windows.Forms.Label();
+            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxSearchTabControl.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +44,9 @@ namespace CIS560Project
             // uxSearchTextbox
             // 
             this.uxSearchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 62);
+            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 50);
             this.uxSearchTextbox.Name = "uxSearchTextbox";
-            this.uxSearchTextbox.Size = new System.Drawing.Size(677, 49);
+            this.uxSearchTextbox.Size = new System.Drawing.Size(677, 28);
             this.uxSearchTextbox.TabIndex = 0;
             // 
             // uxSearchButton
@@ -63,9 +63,9 @@ namespace CIS560Project
             // 
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(701, 184);
+            this.uxTopTenListView.Location = new System.Drawing.Point(701, 162);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(292, 511);
+            this.uxTopTenListView.Size = new System.Drawing.Size(292, 533);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -83,10 +83,10 @@ namespace CIS560Project
             // uxMoviesTab
             // 
             this.uxMoviesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMoviesTab.Location = new System.Drawing.Point(8, 51);
+            this.uxMoviesTab.Location = new System.Drawing.Point(4, 29);
             this.uxMoviesTab.Name = "uxMoviesTab";
             this.uxMoviesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxMoviesTab.Size = new System.Drawing.Size(599, 502);
+            this.uxMoviesTab.Size = new System.Drawing.Size(607, 528);
             this.uxMoviesTab.TabIndex = 0;
             this.uxMoviesTab.Text = "Movies";
             this.uxMoviesTab.UseVisualStyleBackColor = true;
@@ -95,32 +95,32 @@ namespace CIS560Project
             // 
             this.uxTheatersTab.Controls.Add(this.uxDateLabel);
             this.uxTheatersTab.Controls.Add(this.uxDatePicker);
-            this.uxTheatersTab.Location = new System.Drawing.Point(8, 51);
+            this.uxTheatersTab.Location = new System.Drawing.Point(4, 29);
             this.uxTheatersTab.Name = "uxTheatersTab";
             this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxTheatersTab.Size = new System.Drawing.Size(599, 502);
+            this.uxTheatersTab.Size = new System.Drawing.Size(607, 528);
             this.uxTheatersTab.TabIndex = 1;
             this.uxTheatersTab.Text = "Theaters";
             this.uxTheatersTab.UseVisualStyleBackColor = true;
-            // 
-            // uxDatePicker
-            // 
-            this.uxDatePicker.Location = new System.Drawing.Point(35, 89);
-            this.uxDatePicker.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
-            this.uxDatePicker.MinDate = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
-            this.uxDatePicker.Name = "uxDatePicker";
-            this.uxDatePicker.Size = new System.Drawing.Size(339, 44);
-            this.uxDatePicker.TabIndex = 0;
             // 
             // uxDateLabel
             // 
             this.uxDateLabel.AutoSize = true;
             this.uxDateLabel.Location = new System.Drawing.Point(31, 22);
             this.uxDateLabel.Name = "uxDateLabel";
-            this.uxDateLabel.Size = new System.Drawing.Size(93, 37);
+            this.uxDateLabel.Size = new System.Drawing.Size(48, 20);
             this.uxDateLabel.TabIndex = 1;
             this.uxDateLabel.Text = "Date:";
             this.uxDateLabel.UseMnemonic = false;
+            // 
+            // uxDatePicker
+            // 
+            this.uxDatePicker.Location = new System.Drawing.Point(35, 64);
+            this.uxDatePicker.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.uxDatePicker.MinDate = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
+            this.uxDatePicker.Name = "uxDatePicker";
+            this.uxDatePicker.Size = new System.Drawing.Size(339, 26);
+            this.uxDatePicker.TabIndex = 0;
             // 
             // Form1
             // 

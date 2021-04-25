@@ -55,5 +55,11 @@ namespace CIS560Project
             var d = new RetrieveMoviesDataDelegate();
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Movie> GetRecentMovies()
+        {
+            var d = new GetRecentMoviesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
     }
 }

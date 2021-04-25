@@ -49,6 +49,7 @@
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetRecentMoviesDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveMoviesDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
