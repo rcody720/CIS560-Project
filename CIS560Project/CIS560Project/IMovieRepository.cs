@@ -47,5 +47,7 @@ namespace CIS560Project
         IReadOnlyList<(string, (string, string))> GetShowings(DateTime currentDate);
 
         IReadOnlyList<Movie> GetMovies(string genre);
+
+        IReadOnlyList<Movie> GetMovies(string firstName, string lastName);
     }
 }

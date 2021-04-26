@@ -57,6 +57,18 @@ namespace CIS560Project
                     uxTopTenListView.Items.Add(sb.ToString());
                 }
             }
+            else if (uxActorTextbox.Text != "")
+            {
+                string[] actorName = uxActorTextbox.Text.Split(' ');
+                IReadOnlyList<Movie> result = MovieRepo.GetMovies(actorName[0], actorName[1]);
+                uxTopTenListView.Clear();
+                foreach (Movie m in result)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
+                    uxTopTenListView.Items.Add(sb.ToString());
+                }
+            }
             else
             {
                 IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
