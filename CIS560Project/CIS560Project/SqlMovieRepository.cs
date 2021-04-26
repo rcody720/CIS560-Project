@@ -56,7 +56,7 @@ namespace CIS560Project
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<Movie> GetRecentMovies()
+        public Dictionary<Movie, double> GetRecentMovies()
         {
             var d = new GetRecentMoviesDataDelegate();
             return executor.ExecuteReader(d);

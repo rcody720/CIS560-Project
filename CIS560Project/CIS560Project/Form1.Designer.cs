@@ -71,12 +71,12 @@ namespace CIS560Project
             // 
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(701, 162);
+            this.uxTopTenListView.Location = new System.Drawing.Point(701, 193);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(292, 533);
+            this.uxTopTenListView.Size = new System.Drawing.Size(292, 502);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
-            this.uxTopTenListView.View = System.Windows.Forms.View.Details;
+            this.uxTopTenListView.View = System.Windows.Forms.View.List;
             // 
             // uxSearchTabControl
             // 

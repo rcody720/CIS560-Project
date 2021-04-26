@@ -19,11 +19,11 @@ namespace CIS560Project
         {
             InitializeComponent();
 
-            IReadOnlyList<Movie> movies = MovieRepo.GetRecentMovies();
+            Dictionary<Movie, double> movies = MovieRepo.GetRecentMovies();
 
-            foreach(Movie m in movies)
+            foreach(var item in movies)
             {
-                uxTopTenListView.Items.Add(m.MovieName);
+                uxTopTenListView.Items.Add("{0}\t{1}", item.Key.MovieName, item.Value.ToString());
             }
             
         }
