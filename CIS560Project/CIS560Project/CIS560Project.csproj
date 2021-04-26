@@ -49,6 +49,7 @@
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDirectorRatings.cs" />
+    <Compile Include="DataDelegates\GetEarningsRankingsBasedOnRuntimeDataDelegate.cs" />
     <Compile Include="DataDelegates\GetMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetRecentMoviesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetTheaterSalesDataDelegate.cs" />
