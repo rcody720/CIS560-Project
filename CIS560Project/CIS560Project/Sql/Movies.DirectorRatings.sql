@@ -8,7 +8,7 @@ WITH DirectorRanks(DirectorId, Rating, NumMovies) AS
         LEFT JOIN Movies.MovieReview MR ON MR.MovieId = M.MovieId
 )
 
-SELECT D.Firstname, D.FirstName, D.LastName, (DR.Rating / DR.NumMovies) AS DirectorRating,
+SELECT D.DirectorId, D.Firstname, D.FirstName, D.LastName, (DR.Rating / DR.NumMovies) AS DirectorRating,
 RANK() OVER(ORDER BY DR.Rating / DR.NumMovies DESC) AS Popularity
 FROM Movies.Director D
     RIGHT JOIN DirectorRanks DR ON DR.DirectorId = D.DirectorId
