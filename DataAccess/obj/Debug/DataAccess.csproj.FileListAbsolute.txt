@@ -11,3 +11,10 @@ C:\Users\rcody720\source\repos\Movies\DataAccess\obj\Debug\DataAccess.csprojAsse
 C:\Users\rcody720\source\repos\Movies\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\rcody720\source\repos\Movies\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\rcody720\source\repos\Movies\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.pdb
