@@ -13,7 +13,7 @@ namespace CIS560Project
 {
     public partial class Form1 : Form
     {
-        private readonly SqlMovieRepository MovieRepo = new SqlMovieRepository(@"Server=mssql.cs.ksu.edu;Database=rcody720;User ID=rcody720;Password=@dr93/cr99&Kr60&Cr53;Integrated Security=False;");
+        private readonly SqlMovieRepository MovieRepo = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Integrated Security=False;");
         private readonly SqlDirectorRepository DirectorRepo = new SqlDirectorRepository(@"Server=...");
         public Form1()
         {
