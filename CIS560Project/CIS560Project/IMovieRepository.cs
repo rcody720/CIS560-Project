@@ -42,6 +42,6 @@ namespace CIS560Project
 
         IReadOnlyList<Movie> GetRecentMovies();
 
-        Dictionary<Movie, int> GetTheaterSales();
+        Dictionary<Movie, double> GetTheaterSales();
     }
 }
