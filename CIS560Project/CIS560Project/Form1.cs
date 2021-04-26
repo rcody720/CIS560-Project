@@ -14,7 +14,7 @@ namespace CIS560Project
     public partial class Form1 : Form
     {
         private readonly SqlMovieRepository MovieRepo = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Integrated Security=False;");
-        private readonly SqlDirectorRepository DirectorRepo = new SqlDirectorRepository(@"Server=...");
+        private readonly SqlDirectorRepository DirectorRepo = new SqlDirectorRepository(@"Server=(localdb)\MSSQLLocalDb;Integrated Security=False;");
         public Form1()
         {
             InitializeComponent();
