@@ -42,6 +42,17 @@ namespace CIS560Project
                 MessageBox.Show(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
                     result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
             }
+            else
+            {
+                IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
+                StringBuilder sb = new StringBuilder();
+                foreach(Movie m in result)
+                {
+                    sb.AppendFormat("{0}{1}{2}{3}{4}{5}{6}{7}", m.MovieName, Environment.NewLine, m.Rating, Environment.NewLine,
+                        m.RunTime.ToString(), Environment.NewLine, m.ReleaseDate);
+                }
+                MessageBox.Show(sb.ToString());
+            }
             
         }
 
