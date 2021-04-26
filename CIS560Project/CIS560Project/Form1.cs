@@ -20,10 +20,11 @@ namespace CIS560Project
             InitializeComponent();
 
             Dictionary<Movie, double> movies = MovieRepo.GetRecentMovies();
-
             foreach(var item in movies)
             {
-                uxTopTenListView.Items.Add("{0}\t{1}", item.Key.MovieName, item.Value.ToString());
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("{0}\t{1}", item.Key.MovieName, item.Value);
+                uxTopTenListView.Items.Add(sb.ToString());
             }
             
         }
