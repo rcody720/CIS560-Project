@@ -194,7 +194,7 @@ namespace CIS560Project
             this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 3;
             this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
             this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
-            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxMostPopularDirectorsButton_Click);
+            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxTotalEarningsPerRuntimeGroups_Click);
             // 
             // Form1
             // 
