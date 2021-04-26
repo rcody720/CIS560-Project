@@ -53,13 +53,13 @@ namespace CIS560Project
             this.uxSearchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxSearchTextbox.Location = new System.Drawing.Point(45, 72);
             this.uxSearchTextbox.Name = "uxSearchTextbox";
-            this.uxSearchTextbox.Size = new System.Drawing.Size(677, 28);
+            this.uxSearchTextbox.Size = new System.Drawing.Size(550, 28);
             this.uxSearchTextbox.TabIndex = 0;
             // 
             // uxSearchButton
             // 
             this.uxSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchButton.Location = new System.Drawing.Point(794, 50);
+            this.uxSearchButton.Location = new System.Drawing.Point(877, 50);
             this.uxSearchButton.Name = "uxSearchButton";
             this.uxSearchButton.Size = new System.Drawing.Size(200, 72);
             this.uxSearchButton.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace CIS560Project
             this.uxTopTenListView.HideSelection = false;
             this.uxTopTenListView.Location = new System.Drawing.Point(485, 193);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(553, 501);
+            this.uxTopTenListView.Size = new System.Drawing.Size(592, 501);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -201,7 +201,7 @@ namespace CIS560Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 746);
+            this.ClientSize = new System.Drawing.Size(1086, 746);
             this.Controls.Add(this.uxSearchLabel);
             this.Controls.Add(this.uxSearchTabControl);
             this.Controls.Add(this.uxTopTenListView);
