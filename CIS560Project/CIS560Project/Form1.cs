@@ -23,7 +23,7 @@ namespace CIS560Project
             foreach(var item in movies)
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendFormat("{0}    {1}", item.Key.MovieName, item.Value);
+                sb.AppendFormat("{0}    {1:F1}", item.Key.MovieName, item.Value);
                 uxTopTenListView.Items.Add(sb.ToString());
             }
             
