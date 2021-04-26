@@ -69,4 +69,4 @@ C:\Users\rcody720\Documents\560P\CIS560Project\CIS560Project\obj\Debug\CIS560Pro
 C:\Users\rcody720\Documents\560P\CIS560Project\CIS560Project\obj\Debug\CIS560Project.csproj.CopyComplete
 C:\Users\rcody720\Documents\560P\CIS560Project\CIS560Project\obj\Debug\CIS560Project.exe
 C:\Users\rcody720\Documents\560P\CIS560Project\CIS560Project\obj\Debug\CIS560Project.pdb
-C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\CIS560Project\CIS560Project\obj\Debug\CIS560Project.uxOutputLabel.resources
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\CIS560Project\CIS560Project\obj\Debug\CIS560Project.uxForm.resources
