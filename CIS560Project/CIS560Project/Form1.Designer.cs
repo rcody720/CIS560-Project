@@ -34,6 +34,7 @@ namespace CIS560Project
             this.uxTopTenListView = new System.Windows.Forms.ListView();
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
+            this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
             this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
             this.uxMovieEarningsButton = new System.Windows.Forms.Button();
             this.uxMovieIdLabel = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace CIS560Project
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxSearchLabel = new System.Windows.Forms.Label();
-            this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -71,9 +71,9 @@ namespace CIS560Project
             // 
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(677, 193);
+            this.uxTopTenListView.Location = new System.Drawing.Point(485, 193);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(361, 501);
+            this.uxTopTenListView.Size = new System.Drawing.Size(553, 501);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -86,7 +86,7 @@ namespace CIS560Project
             this.uxSearchTabControl.Location = new System.Drawing.Point(45, 133);
             this.uxSearchTabControl.Name = "uxSearchTabControl";
             this.uxSearchTabControl.SelectedIndex = 0;
-            this.uxSearchTabControl.Size = new System.Drawing.Size(615, 561);
+            this.uxSearchTabControl.Size = new System.Drawing.Size(434, 561);
             this.uxSearchTabControl.TabIndex = 4;
             // 
             // uxMoviesTab
@@ -100,10 +100,21 @@ namespace CIS560Project
             this.uxMoviesTab.Location = new System.Drawing.Point(4, 29);
             this.uxMoviesTab.Name = "uxMoviesTab";
             this.uxMoviesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxMoviesTab.Size = new System.Drawing.Size(607, 528);
+            this.uxMoviesTab.Size = new System.Drawing.Size(426, 528);
             this.uxMoviesTab.TabIndex = 0;
             this.uxMoviesTab.Text = "Movies";
             this.uxMoviesTab.UseVisualStyleBackColor = true;
+            // 
+            // uxTotalEarningsPerRuntimeGroupsButton
+            // 
+            this.uxTotalEarningsPerRuntimeGroupsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxTotalEarningsPerRuntimeGroupsButton.Location = new System.Drawing.Point(59, 307);
+            this.uxTotalEarningsPerRuntimeGroupsButton.Name = "uxTotalEarningsPerRuntimeGroupsButton";
+            this.uxTotalEarningsPerRuntimeGroupsButton.Size = new System.Drawing.Size(336, 53);
+            this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 3;
+            this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
+            this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
+            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxTotalEarningsPerRuntimeGroups_Click);
             // 
             // uxMostPopularDirectorsButton
             // 
@@ -184,17 +195,6 @@ namespace CIS560Project
             this.uxSearchLabel.Size = new System.Drawing.Size(75, 24);
             this.uxSearchLabel.TabIndex = 5;
             this.uxSearchLabel.Text = "Search:";
-            // 
-            // uxTotalEarningsPerRuntimeGroupsButton
-            // 
-            this.uxTotalEarningsPerRuntimeGroupsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxTotalEarningsPerRuntimeGroupsButton.Location = new System.Drawing.Point(59, 307);
-            this.uxTotalEarningsPerRuntimeGroupsButton.Name = "uxTotalEarningsPerRuntimeGroupsButton";
-            this.uxTotalEarningsPerRuntimeGroupsButton.Size = new System.Drawing.Size(336, 53);
-            this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 3;
-            this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
-            this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
-            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxTotalEarningsPerRuntimeGroups_Click);
             // 
             // Form1
             // 

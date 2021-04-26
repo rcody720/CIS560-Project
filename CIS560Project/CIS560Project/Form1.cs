@@ -34,25 +34,27 @@ namespace CIS560Project
             if(uxSearchTextbox.Text != "")
             {
                 Movie result = MovieRepo.GetMovie(uxSearchTextbox.Text);
-                MessageBox.Show(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
-                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
+                uxTopTenListView.Items.Clear();
+                uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
+                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
             }
             else if (uxMovieIdTextbox.Text != "")
             {
                 Movie result = MovieRepo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
-                MessageBox.Show(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
-                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
+                uxTopTenListView.Items.Clear();
+                uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
+                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
             }
             else
             {
                 IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
-                StringBuilder sb = new StringBuilder();
+                uxTopTenListView.Items.Clear();
                 foreach(Movie m in result)
                 {
-                    sb.AppendFormat("{0}{1}{2}{3}{4}{5}{6}{7}{8}", m.MovieName, Environment.NewLine, m.Rating, Environment.NewLine,
-                        m.RunTime.ToString(), Environment.NewLine, m.ReleaseDate, Environment.NewLine, Environment.NewLine);
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
+                    uxTopTenListView.Items.Add(sb.ToString());
                 }
-                MessageBox.Show(sb.ToString());
             }
             
         }
@@ -60,34 +62,37 @@ namespace CIS560Project
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
         {
             Dictionary<Movie, double> result = MovieRepo.GetTheaterSales();
-            StringBuilder sb = new StringBuilder();
-            foreach(var item in result)
+            uxTopTenListView.Items.Clear();
+            foreach (var item in result)
             {
-                sb.AppendFormat("{0} - {1}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("{0} - {1:C2}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
+                uxTopTenListView.Items.Add(sb.ToString());
             }
-            MessageBox.Show(sb.ToString().TrimEnd());
         }
 
         private void uxMostPopularDirectorsButton_Click(object sender, EventArgs e)
         {
             IReadOnlyList<Director> result = DirectorRepo.GetDirectorRatings();
-            StringBuilder sb = new StringBuilder();
-            foreach(Director d in result)
+            uxTopTenListView.Items.Clear();
+            foreach (Director d in result)
             {
+                StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0} {1}{2}", d.FirstName, d.LastName, Environment.NewLine);
+                uxTopTenListView.Items.Add(sb.ToString());
             }
-            MessageBox.Show(sb.ToString().TrimEnd());
         }
 
         private void uxTotalEarningsPerRuntimeGroups_Click(object sender, EventArgs e)
         {
             Dictionary<string, double> result = MovieRepo.GetEarningsRankingsBasedOnRuntime();
-            StringBuilder sb = new StringBuilder();
+            uxTopTenListView.Items.Clear();
             foreach (var item in result)
             {
-                sb.AppendFormat("{0} - {1}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("{0} - {1:C2}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
+                uxTopTenListView.Items.Add(sb.ToString());
             }
-            MessageBox.Show(sb.ToString().TrimEnd());
         }
     }
 }
