@@ -282,7 +282,7 @@ namespace CIS560Project
             // 
             this.uxGenreLabel.AutoSize = true;
             this.uxGenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxGenreLabel.Location = new System.Drawing.Point(19, 45);
+            this.uxGenreLabel.Location = new System.Drawing.Point(23, 45);
             this.uxGenreLabel.Name = "uxGenreLabel";
             this.uxGenreLabel.Size = new System.Drawing.Size(75, 24);
             this.uxGenreLabel.TabIndex = 5;
