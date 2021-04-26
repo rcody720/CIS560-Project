@@ -75,6 +75,7 @@ namespace CIS560Project
             this.uxTopTenListView.Size = new System.Drawing.Size(292, 533);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
+            this.uxTopTenListView.View = System.Windows.Forms.View.Details;
             // 
             // uxSearchTabControl
             // 
