@@ -63,7 +63,8 @@ namespace CIS560Project
 
             uxSearchTextbox.Clear();
             uxMovieIdTextbox.Clear();
-            uxGenreComboBox.SelectedItem = "";
+            uxGenreComboBox.SelectedItem = null;
+            uxActorTextbox.Text = "";
         }
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
@@ -135,8 +136,9 @@ namespace CIS560Project
         private void DisplayMovie(Movie m)
         {
             uxTopTenListView.Items.Clear();
-            uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
+            uxTopTenListView.Items.Add(string.Format("Movie: {0}    Rating: {1}    RunTime: {2}    ReleaseDate: {3}",
                 m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString()));
+            uxTopTenListView.Items.Add("");
         }
 
         private void DisplayMovies(IReadOnlyList<Movie> movies)
@@ -144,8 +146,9 @@ namespace CIS560Project
             uxTopTenListView.Clear();
             foreach (Movie m in movies)
             {                
-                uxTopTenListView.Items.Add(string.Format("{0}  {1}  {2}  {3}",
+                uxTopTenListView.Items.Add(string.Format("Movie: {0}    Rating: {1}    RunTime: {2}    ReleaseDate: {3}",
                 m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString()));
+                uxTopTenListView.Items.Add("");
             }
         }
     }

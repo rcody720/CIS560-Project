@@ -34,7 +34,11 @@ namespace CIS560Project
             this.uxTopTenListView = new System.Windows.Forms.ListView();
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
+            this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
+            this.uxActorLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.uxMovieIdLabel = new System.Windows.Forms.Label();
+            this.uxActorTextbox = new System.Windows.Forms.TextBox();
             this.uxMovieIdTextbox = new System.Windows.Forms.TextBox();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
             this.uxDateLabel = new System.Windows.Forms.Label();
@@ -49,16 +53,12 @@ namespace CIS560Project
             this.uxRuntimeMinutesLabel = new System.Windows.Forms.Label();
             this.uxRatingLabel = new System.Windows.Forms.Label();
             this.uxMovieTitleLabel = new System.Windows.Forms.Label();
-            this.uxGenreLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.uxMovieStatsTab = new System.Windows.Forms.TabPage();
             this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
             this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
             this.uxMovieEarningsButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.uxActorLabel = new System.Windows.Forms.Label();
-            this.uxActorTextbox = new System.Windows.Forms.TextBox();
-            this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
+            this.uxGenreLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -77,7 +77,7 @@ namespace CIS560Project
             // uxSearchButton
             // 
             this.uxSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchButton.Location = new System.Drawing.Point(723, 50);
+            this.uxSearchButton.Location = new System.Drawing.Point(609, 50);
             this.uxSearchButton.Name = "uxSearchButton";
             this.uxSearchButton.Size = new System.Drawing.Size(249, 72);
             this.uxSearchButton.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace CIS560Project
             this.uxTopTenListView.HideSelection = false;
             this.uxTopTenListView.Location = new System.Drawing.Point(501, 195);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(573, 528);
+            this.uxTopTenListView.Size = new System.Drawing.Size(854, 528);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -126,6 +126,49 @@ namespace CIS560Project
             this.uxMoviesTab.Text = "Advanced Movie Search";
             this.uxMoviesTab.UseVisualStyleBackColor = true;
             // 
+            // uxGenreComboBox
+            // 
+            this.uxGenreComboBox.FormattingEnabled = true;
+            this.uxGenreComboBox.Items.AddRange(new object[] {
+            "Action",
+            "Animation",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Experimental",
+            "Fantasy",
+            "Historical",
+            "Horror",
+            "Romance",
+            "ScienceFiction",
+            "Thriller",
+            "Western",
+            "Other"});
+            this.uxGenreComboBox.Location = new System.Drawing.Point(35, 157);
+            this.uxGenreComboBox.Name = "uxGenreComboBox";
+            this.uxGenreComboBox.Size = new System.Drawing.Size(190, 28);
+            this.uxGenreComboBox.TabIndex = 2;
+            // 
+            // uxActorLabel
+            // 
+            this.uxActorLabel.AutoSize = true;
+            this.uxActorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxActorLabel.Location = new System.Drawing.Point(31, 218);
+            this.uxActorLabel.Name = "uxActorLabel";
+            this.uxActorLabel.Size = new System.Drawing.Size(59, 24);
+            this.uxActorLabel.TabIndex = 1;
+            this.uxActorLabel.Text = "Actor:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Genre:";
+            // 
             // uxMovieIdLabel
             // 
             this.uxMovieIdLabel.AutoSize = true;
@@ -135,6 +178,14 @@ namespace CIS560Project
             this.uxMovieIdLabel.Size = new System.Drawing.Size(88, 24);
             this.uxMovieIdLabel.TabIndex = 1;
             this.uxMovieIdLabel.Text = "Movie ID:";
+            // 
+            // uxActorTextbox
+            // 
+            this.uxActorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxActorTextbox.Location = new System.Drawing.Point(35, 245);
+            this.uxActorTextbox.Name = "uxActorTextbox";
+            this.uxActorTextbox.Size = new System.Drawing.Size(191, 29);
+            this.uxActorTextbox.TabIndex = 0;
             // 
             // uxMovieIdTextbox
             // 
@@ -278,26 +329,6 @@ namespace CIS560Project
             this.uxMovieTitleLabel.TabIndex = 0;
             this.uxMovieTitleLabel.Text = "Movie Title:";
             // 
-            // uxGenreLabel
-            // 
-            this.uxGenreLabel.AutoSize = true;
-            this.uxGenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxGenreLabel.Location = new System.Drawing.Point(23, 45);
-            this.uxGenreLabel.Name = "uxGenreLabel";
-            this.uxGenreLabel.Size = new System.Drawing.Size(75, 24);
-            this.uxGenreLabel.TabIndex = 5;
-            this.uxGenreLabel.Text = "Search:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(497, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Output:";
-            // 
             // uxMovieStatsTab
             // 
             this.uxMovieStatsTab.Controls.Add(this.uxTotalEarningsPerRuntimeGroupsButton);
@@ -319,6 +350,7 @@ namespace CIS560Project
             this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 4;
             this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
             this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
+            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxTotalEarningsPerRuntimeGroups_Click);
             // 
             // uxMostPopularDirectorsButton
             // 
@@ -329,6 +361,7 @@ namespace CIS560Project
             this.uxMostPopularDirectorsButton.TabIndex = 5;
             this.uxMostPopularDirectorsButton.Text = "Most Popular Directors";
             this.uxMostPopularDirectorsButton.UseVisualStyleBackColor = true;
+            this.uxMostPopularDirectorsButton.Click += new System.EventHandler(this.uxMostPopularDirectorsButton_Click);
             // 
             // uxMovieEarningsButton
             // 
@@ -339,63 +372,33 @@ namespace CIS560Project
             this.uxMovieEarningsButton.TabIndex = 6;
             this.uxMovieEarningsButton.Text = "Movie Earnings";
             this.uxMovieEarningsButton.UseVisualStyleBackColor = true;
+            this.uxMovieEarningsButton.Click += new System.EventHandler(this.uxMovieEarningsButton_Click);
             // 
-            // label2
+            // uxGenreLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Genre:";
+            this.uxGenreLabel.AutoSize = true;
+            this.uxGenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxGenreLabel.Location = new System.Drawing.Point(23, 45);
+            this.uxGenreLabel.Name = "uxGenreLabel";
+            this.uxGenreLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxGenreLabel.TabIndex = 5;
+            this.uxGenreLabel.Text = "Search:";
             // 
-            // uxActorLabel
+            // label1
             // 
-            this.uxActorLabel.AutoSize = true;
-            this.uxActorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxActorLabel.Location = new System.Drawing.Point(31, 218);
-            this.uxActorLabel.Name = "uxActorLabel";
-            this.uxActorLabel.Size = new System.Drawing.Size(59, 24);
-            this.uxActorLabel.TabIndex = 1;
-            this.uxActorLabel.Text = "Actor:";
-            // 
-            // uxActorTextbox
-            // 
-            this.uxActorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxActorTextbox.Location = new System.Drawing.Point(35, 245);
-            this.uxActorTextbox.Name = "uxActorTextbox";
-            this.uxActorTextbox.Size = new System.Drawing.Size(191, 29);
-            this.uxActorTextbox.TabIndex = 0;
-            // 
-            // uxGenreComboBox
-            // 
-            this.uxGenreComboBox.FormattingEnabled = true;
-            this.uxGenreComboBox.Items.AddRange(new object[] {
-            "Action",
-            "Animation",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Experimental",
-            "Fantasy",
-            "Historical",
-            "Horror",
-            "Romance",
-            "ScienceFiction",
-            "Thriller",
-            "Western",
-            "Other"});
-            this.uxGenreComboBox.Location = new System.Drawing.Point(35, 157);
-            this.uxGenreComboBox.Name = "uxGenreComboBox";
-            this.uxGenreComboBox.Size = new System.Drawing.Size(190, 28);
-            this.uxGenreComboBox.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(497, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Output:";
             // 
             // uxOutputLabel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 746);
+            this.ClientSize = new System.Drawing.Size(1380, 746);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxGenreLabel);
             this.Controls.Add(this.uxSearchTabControl);
