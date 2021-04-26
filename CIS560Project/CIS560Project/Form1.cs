@@ -30,13 +30,13 @@ namespace CIS560Project
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            if(uxSearchTextbox.Text != null)
+            if(uxSearchTextbox.Text != "")
             {
                 Movie result = MovieRepo.GetMovie(uxSearchTextbox.Text);
                 MessageBox.Show(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
                     result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
             }
-            else if (uxMovieIdTextbox.Text != null)
+            else if (uxMovieIdTextbox.Text != "")
             {
                 Movie result = MovieRepo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
                 MessageBox.Show(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
