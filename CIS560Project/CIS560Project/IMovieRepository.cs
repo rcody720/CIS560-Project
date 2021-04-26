@@ -13,7 +13,7 @@ namespace CIS560Project
         /// Retrieves all movies from the database.
         /// </summary>
         /// <returns> <see cref="IReadOnlyList{T}"/> containing all movies.</returns>
-        IReadOnlyList<Movie> RetrieveMovies();
+        IReadOnlyList<Movie> RetrieveMovies();  
 
         /// <summary>
         /// Fetches the movie with the given <paramref name="movieId"/> if it exists.
@@ -26,7 +26,7 @@ namespace CIS560Project
         /// Gets the movie with the given <paramref name="movieName"/> if it exists.
         /// </summary>
         /// <param name="movieName">Name of the movie to get.</param>
-        /// <returns>The movie containing the information of the requesetd person.</returns>
+        /// <returns>The movie containing the information of the requesetd movie.</returns>
         Movie GetMovie(string movieName);
 
         /// <summary>
@@ -45,5 +45,7 @@ namespace CIS560Project
         Dictionary<Movie, double> GetTheaterSales();
 
         IReadOnlyList<(string, (string, string))> GetShowings(DateTime currentDate);
+
+        IReadOnlyList<Movie> GetMovies(string genre);
     }
 }

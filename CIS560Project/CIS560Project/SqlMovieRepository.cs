@@ -76,5 +76,11 @@ namespace CIS560Project
             var d = new GetShowingsDataDelegate(currentDate);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Movie> GetMovies(string genre)
+        {
+            var d = new GetMoviesByGenreDataDelegate(genre);
+            return executor.ExecuteReader(d);
+        }
     }
 }

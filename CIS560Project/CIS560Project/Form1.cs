@@ -46,6 +46,17 @@ namespace CIS560Project
                 uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
                     result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
             }
+            else if (uxGenreComboBox.Text != "")
+            {
+                IReadOnlyList<Movie> result = MovieRepo.GetMovies(uxGenreComboBox.SelectedItem.ToString());
+                uxTopTenListView.Clear();
+                foreach (Movie m in result)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
+                    uxTopTenListView.Items.Add(sb.ToString());
+                }
+            }
             else
             {
                 IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
@@ -60,7 +71,7 @@ namespace CIS560Project
 
             uxSearchTextbox.Clear();
             uxMovieIdTextbox.Clear();
-            uxGenreTextbox.Clear();
+            uxGenreComboBox.SelectedItem = "";
         }
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
