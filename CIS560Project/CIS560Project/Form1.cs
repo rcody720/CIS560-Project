@@ -35,50 +35,30 @@ namespace CIS560Project
             if(uxSearchTextbox.Text != "")
             {
                 Movie result = MovieRepo.GetMovie(uxSearchTextbox.Text);
-                uxTopTenListView.Items.Clear();
-                uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
-                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
+                DisplayMovie(result);
+                
             }
             else if (uxMovieIdTextbox.Text != "")
             {
                 Movie result = MovieRepo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
-                uxTopTenListView.Items.Clear();
-                uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
-                    result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
+                DisplayMovie(result);
             }
             else if (uxGenreComboBox.Text != "")
             {
                 IReadOnlyList<Movie> result = MovieRepo.GetMovies(uxGenreComboBox.SelectedItem.ToString());
-                uxTopTenListView.Clear();
-                foreach (Movie m in result)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
-                    uxTopTenListView.Items.Add(sb.ToString());
-                }
+                DisplayMovies(result);
+                
             }
             else if (uxActorTextbox.Text != "")
             {
                 string[] actorName = uxActorTextbox.Text.Split(' ');
                 IReadOnlyList<Movie> result = MovieRepo.GetMovies(actorName[0], actorName[1]);
-                uxTopTenListView.Clear();
-                foreach (Movie m in result)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
-                    uxTopTenListView.Items.Add(sb.ToString());
-                }
+                DisplayMovies(result);
             }
             else
             {
                 IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
-                uxTopTenListView.Items.Clear();
-                foreach(Movie m in result)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat("{0}  {1}  {2}  {3}", m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString());
-                    uxTopTenListView.Items.Add(sb.ToString());
-                }
+                DisplayMovies(result);
             }
 
             uxSearchTextbox.Clear();
@@ -150,6 +130,23 @@ namespace CIS560Project
             uxMovieTitleTextbox.Text = "";
             uxRatingTextbox.Text = "";
             uxRuntimeMinutesTextbox.Text = "";
+        }
+
+        private void DisplayMovie(Movie m)
+        {
+            uxTopTenListView.Items.Clear();
+            uxTopTenListView.Items.Add(string.Format("Movie: {0}\nRating: {1}\nRunTime: {2}\nReleaseDate: {3}",
+                m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString()));
+        }
+
+        private void DisplayMovies(IReadOnlyList<Movie> movies)
+        {
+            uxTopTenListView.Clear();
+            foreach (Movie m in movies)
+            {                
+                uxTopTenListView.Items.Add(string.Format("{0}  {1}  {2}  {3}",
+                m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString()));
+            }
         }
     }
 }
