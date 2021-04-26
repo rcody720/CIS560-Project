@@ -31,7 +31,7 @@ namespace CIS560Project.DataDelegates
             if (!reader.Read())
                 return null;
 
-            return new Movie(reader.GetInt32("MovieId"), MovieName, reader.GetString("Rating"), reader.GetInt32("RunTime"), reader.GetDateTime("ReleaseDate"));
+            return new Movie(reader.GetInt32("MovieId"), MovieName, reader.GetString("Rating"), reader.GetInt32("RuntimeMinutes"), reader.GetDateTime("ReleaseDate"));
         }
     }
 }
