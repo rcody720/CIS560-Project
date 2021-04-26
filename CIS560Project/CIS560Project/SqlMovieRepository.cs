@@ -30,9 +30,6 @@ namespace CIS560Project
             if (runTime == 0)
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(runTime));
 
-            if (releaseDate == default)
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(rating));
-
             var cmdd = new CreateMovieDataDelegate(movieName, rating, runTime, releaseDate);
             return executor.ExecuteNonQuery(cmdd);
 

@@ -106,5 +106,22 @@ namespace CIS560Project
                 uxTopTenListView.Items.Add(sb.ToString());
             }
         }
+
+        private void uxAddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Movie result = MovieRepo.CreateMovie(uxMovieTitleTextbox.Text, uxRatingTextbox.Text, Convert.ToInt32(uxRuntimeMinutesTextbox.Text), uxReleaseDatePicker.Value);
+                uxTopTenListView.Items.Clear();
+                uxTopTenListView.Items.Add(string.Format("{0}  {1}  {2}  {3}", result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Input. Try again.");
+            }
+
+            
+
+        }
     }
 }
