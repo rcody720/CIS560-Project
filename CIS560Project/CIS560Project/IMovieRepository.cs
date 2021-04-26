@@ -43,5 +43,7 @@ namespace CIS560Project
         Dictionary<Movie, double> GetRecentMovies();
 
         Dictionary<Movie, double> GetTheaterSales();
+
+        IReadOnlyList<(string, (string, string))> GetShowings(DateTime currentDate);
     }
 }

@@ -74,7 +74,7 @@ namespace CIS560Project
             return executor.ExecuteReader(d);
         }
 
-        public Dictionary<string, (string, string)> GetShowings(DateTime currentDate)
+        public IReadOnlyList<(string, (string, string))> GetShowings(DateTime currentDate)
         {
             var d = new GetShowingsDataDelegate(currentDate);
             return executor.ExecuteReader(d);

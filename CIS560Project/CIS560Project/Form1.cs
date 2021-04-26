@@ -97,12 +97,12 @@ namespace CIS560Project
 
         private void uxDatePicker_ValueChanged(object sender, EventArgs e)
         {
-            Dictionary<string, (string, string)> result = MovieRepo.GetShowings(uxDatePicker.Value);
+            IReadOnlyList<(string, (string, string))> result = MovieRepo.GetShowings(uxDatePicker.Value);
             uxTopTenListView.Items.Clear();
             foreach(var item in result)
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendFormat("{0} - {1} : {2}", item.Key, item.Value.Item1, item.Value.Item2);
+                sb.AppendFormat("{0} - {1} : {2}", item.Item1, item.Item2.Item1, item.Item2.Item2);
                 uxTopTenListView.Items.Add(sb.ToString());
             }
         }

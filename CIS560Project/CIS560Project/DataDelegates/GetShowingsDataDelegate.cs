@@ -10,7 +10,7 @@ using System.Data;
 
 namespace CIS560Project.DataDelegates
 {
-    internal class GetShowingsDataDelegate : DataReaderDelegate<Dictionary<string, (string, string)>>
+    internal class GetShowingsDataDelegate : DataReaderDelegate<IReadOnlyList<(string, (string, string))>>
     {
         private readonly DateTime CurrentDate;
 
@@ -27,13 +27,13 @@ namespace CIS560Project.DataDelegates
             p.Value = CurrentDate;
         }
 
-        public override Dictionary<string, (string, string)> Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<(string, (string, string))> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var showings = new Dictionary<string, (string, string)>();
+            var showings = new List<(string, (string, string))>();
 
             while (reader.Read())
             {
-                showings.Add(reader.GetString("MovieTitle"), (reader.GetString("TheaterName"), reader.GetString("ShowTime")));
+                showings.Add((reader.GetString("MovieTitle"), (reader.GetString("TheaterName"), reader.GetString("ShowTime"))));
             }
 
             return showings;
