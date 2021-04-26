@@ -26,5 +26,10 @@ namespace CIS560Project.Models
             this.ReleaseDate = releaseDate;
         }
 
+        public override string ToString()
+        {
+            return MovieName;
+        }
+
     }
 }
