@@ -154,9 +154,10 @@ namespace CIS560Project
             // uxMovieIdLabel
             // 
             this.uxMovieIdLabel.AutoSize = true;
-            this.uxMovieIdLabel.Location = new System.Drawing.Point(31, 31);
+            this.uxMovieIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieIdLabel.Location = new System.Drawing.Point(31, 27);
             this.uxMovieIdLabel.Name = "uxMovieIdLabel";
-            this.uxMovieIdLabel.Size = new System.Drawing.Size(75, 20);
+            this.uxMovieIdLabel.Size = new System.Drawing.Size(88, 24);
             this.uxMovieIdLabel.TabIndex = 1;
             this.uxMovieIdLabel.Text = "Movie ID:";
             // 
@@ -183,11 +184,12 @@ namespace CIS560Project
             // uxDateLabel
             // 
             this.uxDateLabel.AutoSize = true;
+            this.uxDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxDateLabel.Location = new System.Drawing.Point(31, 31);
             this.uxDateLabel.Name = "uxDateLabel";
-            this.uxDateLabel.Size = new System.Drawing.Size(48, 20);
+            this.uxDateLabel.Size = new System.Drawing.Size(141, 24);
             this.uxDateLabel.TabIndex = 1;
-            this.uxDateLabel.Text = "Date:";
+            this.uxDateLabel.Text = "Showtimes For:";
             this.uxDateLabel.UseMnemonic = false;
             // 
             // uxDatePicker
