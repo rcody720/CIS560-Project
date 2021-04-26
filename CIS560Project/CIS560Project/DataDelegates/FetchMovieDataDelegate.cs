@@ -33,7 +33,7 @@ namespace CIS560Project.DataDelegates
             if (!reader.Read())
                 throw new RecordNotFoundException(MovieId.ToString());
 
-            return new Movie(MovieId, reader.GetString("MovieName"), reader.GetString("Rating"), reader.GetInt32("RunTime"), reader.GetDateTime("ReleaseDate"));
+            return new Movie(MovieId, reader.GetString("MovieTitle"), reader.GetString("Rating"), reader.GetInt32("RuntimeMinutes"), reader.GetDateTime("ReleaseDate"));
         }
     }
 }
