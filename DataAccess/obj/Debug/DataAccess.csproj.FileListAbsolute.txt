@@ -18,3 +18,10 @@ C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAcc
 C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\rcody720\Documents\560P\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\rcody720\Documents\560P\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\rcody720\Documents\560P\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\rcody720\Documents\560P\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\rcody720\Documents\560P\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rcody720\Documents\560P\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\rcody720\Documents\560P\DataAccess\obj\Debug\DataAccess.pdb

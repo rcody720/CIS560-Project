@@ -27,6 +27,7 @@ namespace CIS560Project
                 uxTopTenListView.Items.Add(sb.ToString());
             }
             
+            
         }
 
         private void uxSearchButton_Click(object sender, EventArgs e)
@@ -58,7 +59,8 @@ namespace CIS560Project
             }
 
             uxSearchTextbox.Clear();
-            uxMovieIdTextbox.Clear();            
+            uxMovieIdTextbox.Clear();
+            uxGenreTextbox.Clear();
         }
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)

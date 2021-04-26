@@ -34,15 +34,14 @@ namespace CIS560Project
             this.uxTopTenListView = new System.Windows.Forms.ListView();
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
-            this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
-            this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
-            this.uxMovieEarningsButton = new System.Windows.Forms.Button();
             this.uxMovieIdLabel = new System.Windows.Forms.Label();
             this.uxMovieIdTextbox = new System.Windows.Forms.TextBox();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxAddMovieTab = new System.Windows.Forms.TabPage();
+            this.uxAddButton = new System.Windows.Forms.Button();
+            this.uxReleaseDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxRuntimeMinutesTextbox = new System.Windows.Forms.TextBox();
             this.uxRatingTextbox = new System.Windows.Forms.TextBox();
             this.uxMovieTitleTextbox = new System.Windows.Forms.TextBox();
@@ -50,20 +49,27 @@ namespace CIS560Project
             this.uxRuntimeMinutesLabel = new System.Windows.Forms.Label();
             this.uxRatingLabel = new System.Windows.Forms.Label();
             this.uxMovieTitleLabel = new System.Windows.Forms.Label();
-            this.uxSearchLabel = new System.Windows.Forms.Label();
-            this.uxReleaseDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.uxAddButton = new System.Windows.Forms.Button();
+            this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.uxMovieStatsTab = new System.Windows.Forms.TabPage();
+            this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
+            this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
+            this.uxMovieEarningsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.uxActorLabel = new System.Windows.Forms.Label();
+            this.uxActorTextbox = new System.Windows.Forms.TextBox();
+            this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
             this.uxAddMovieTab.SuspendLayout();
+            this.uxMovieStatsTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // uxSearchTextbox
             // 
             this.uxSearchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchTextbox.Location = new System.Drawing.Point(45, 72);
+            this.uxSearchTextbox.Location = new System.Drawing.Point(27, 72);
             this.uxSearchTextbox.Name = "uxSearchTextbox";
             this.uxSearchTextbox.Size = new System.Drawing.Size(550, 28);
             this.uxSearchTextbox.TabIndex = 0;
@@ -71,9 +77,9 @@ namespace CIS560Project
             // uxSearchButton
             // 
             this.uxSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchButton.Location = new System.Drawing.Point(877, 50);
+            this.uxSearchButton.Location = new System.Drawing.Point(723, 50);
             this.uxSearchButton.Name = "uxSearchButton";
-            this.uxSearchButton.Size = new System.Drawing.Size(200, 72);
+            this.uxSearchButton.Size = new System.Drawing.Size(249, 72);
             this.uxSearchButton.TabIndex = 1;
             this.uxSearchButton.Text = "Search";
             this.uxSearchButton.UseVisualStyleBackColor = true;
@@ -83,9 +89,9 @@ namespace CIS560Project
             // 
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(485, 193);
+            this.uxTopTenListView.Location = new System.Drawing.Point(501, 195);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(592, 501);
+            this.uxTopTenListView.Size = new System.Drawing.Size(573, 528);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -95,61 +101,30 @@ namespace CIS560Project
             this.uxSearchTabControl.Controls.Add(this.uxMoviesTab);
             this.uxSearchTabControl.Controls.Add(this.uxTheatersTab);
             this.uxSearchTabControl.Controls.Add(this.uxAddMovieTab);
+            this.uxSearchTabControl.Controls.Add(this.uxMovieStatsTab);
             this.uxSearchTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchTabControl.Location = new System.Drawing.Point(45, 133);
+            this.uxSearchTabControl.Location = new System.Drawing.Point(23, 166);
             this.uxSearchTabControl.Name = "uxSearchTabControl";
             this.uxSearchTabControl.SelectedIndex = 0;
-            this.uxSearchTabControl.Size = new System.Drawing.Size(434, 561);
+            this.uxSearchTabControl.Size = new System.Drawing.Size(453, 561);
             this.uxSearchTabControl.TabIndex = 4;
             // 
             // uxMoviesTab
             // 
-            this.uxMoviesTab.Controls.Add(this.uxTotalEarningsPerRuntimeGroupsButton);
-            this.uxMoviesTab.Controls.Add(this.uxMostPopularDirectorsButton);
-            this.uxMoviesTab.Controls.Add(this.uxMovieEarningsButton);
+            this.uxMoviesTab.Controls.Add(this.uxGenreComboBox);
+            this.uxMoviesTab.Controls.Add(this.uxActorLabel);
+            this.uxMoviesTab.Controls.Add(this.label2);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdLabel);
+            this.uxMoviesTab.Controls.Add(this.uxActorTextbox);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdTextbox);
             this.uxMoviesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxMoviesTab.Location = new System.Drawing.Point(4, 29);
             this.uxMoviesTab.Name = "uxMoviesTab";
             this.uxMoviesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxMoviesTab.Size = new System.Drawing.Size(426, 528);
+            this.uxMoviesTab.Size = new System.Drawing.Size(445, 528);
             this.uxMoviesTab.TabIndex = 0;
-            this.uxMoviesTab.Text = "Movies";
+            this.uxMoviesTab.Text = "Advanced Movie Search";
             this.uxMoviesTab.UseVisualStyleBackColor = true;
-            // 
-            // uxTotalEarningsPerRuntimeGroupsButton
-            // 
-            this.uxTotalEarningsPerRuntimeGroupsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxTotalEarningsPerRuntimeGroupsButton.Location = new System.Drawing.Point(35, 290);
-            this.uxTotalEarningsPerRuntimeGroupsButton.Name = "uxTotalEarningsPerRuntimeGroupsButton";
-            this.uxTotalEarningsPerRuntimeGroupsButton.Size = new System.Drawing.Size(336, 53);
-            this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 3;
-            this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
-            this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
-            this.uxTotalEarningsPerRuntimeGroupsButton.Click += new System.EventHandler(this.uxTotalEarningsPerRuntimeGroups_Click);
-            // 
-            // uxMostPopularDirectorsButton
-            // 
-            this.uxMostPopularDirectorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMostPopularDirectorsButton.Location = new System.Drawing.Point(35, 202);
-            this.uxMostPopularDirectorsButton.Name = "uxMostPopularDirectorsButton";
-            this.uxMostPopularDirectorsButton.Size = new System.Drawing.Size(223, 53);
-            this.uxMostPopularDirectorsButton.TabIndex = 3;
-            this.uxMostPopularDirectorsButton.Text = "Most Popular Directors";
-            this.uxMostPopularDirectorsButton.UseVisualStyleBackColor = true;
-            this.uxMostPopularDirectorsButton.Click += new System.EventHandler(this.uxMostPopularDirectorsButton_Click);
-            // 
-            // uxMovieEarningsButton
-            // 
-            this.uxMovieEarningsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMovieEarningsButton.Location = new System.Drawing.Point(35, 115);
-            this.uxMovieEarningsButton.Name = "uxMovieEarningsButton";
-            this.uxMovieEarningsButton.Size = new System.Drawing.Size(223, 53);
-            this.uxMovieEarningsButton.TabIndex = 3;
-            this.uxMovieEarningsButton.Text = "Movie Earnings";
-            this.uxMovieEarningsButton.UseVisualStyleBackColor = true;
-            this.uxMovieEarningsButton.Click += new System.EventHandler(this.uxMovieEarningsButton_Click);
             // 
             // uxMovieIdLabel
             // 
@@ -176,7 +151,7 @@ namespace CIS560Project
             this.uxTheatersTab.Location = new System.Drawing.Point(4, 29);
             this.uxTheatersTab.Name = "uxTheatersTab";
             this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxTheatersTab.Size = new System.Drawing.Size(426, 528);
+            this.uxTheatersTab.Size = new System.Drawing.Size(445, 528);
             this.uxTheatersTab.TabIndex = 1;
             this.uxTheatersTab.Text = "Theaters";
             this.uxTheatersTab.UseVisualStyleBackColor = true;
@@ -215,10 +190,29 @@ namespace CIS560Project
             this.uxAddMovieTab.Controls.Add(this.uxMovieTitleLabel);
             this.uxAddMovieTab.Location = new System.Drawing.Point(4, 29);
             this.uxAddMovieTab.Name = "uxAddMovieTab";
-            this.uxAddMovieTab.Size = new System.Drawing.Size(426, 528);
+            this.uxAddMovieTab.Size = new System.Drawing.Size(445, 528);
             this.uxAddMovieTab.TabIndex = 2;
             this.uxAddMovieTab.Text = "Add Movie";
             this.uxAddMovieTab.UseVisualStyleBackColor = true;
+            // 
+            // uxAddButton
+            // 
+            this.uxAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddButton.Location = new System.Drawing.Point(23, 385);
+            this.uxAddButton.Name = "uxAddButton";
+            this.uxAddButton.Size = new System.Drawing.Size(148, 56);
+            this.uxAddButton.TabIndex = 3;
+            this.uxAddButton.Text = "Add";
+            this.uxAddButton.UseVisualStyleBackColor = true;
+            this.uxAddButton.Click += new System.EventHandler(this.uxAddButton_Click);
+            // 
+            // uxReleaseDatePicker
+            // 
+            this.uxReleaseDatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxReleaseDatePicker.Location = new System.Drawing.Point(23, 314);
+            this.uxReleaseDatePicker.Name = "uxReleaseDatePicker";
+            this.uxReleaseDatePicker.Size = new System.Drawing.Size(280, 26);
+            this.uxReleaseDatePicker.TabIndex = 2;
             // 
             // uxRuntimeMinutesTextbox
             // 
@@ -284,44 +278,118 @@ namespace CIS560Project
             this.uxMovieTitleLabel.TabIndex = 0;
             this.uxMovieTitleLabel.Text = "Movie Title:";
             // 
-            // uxSearchLabel
+            // uxGenreLabel
             // 
-            this.uxSearchLabel.AutoSize = true;
-            this.uxSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchLabel.Location = new System.Drawing.Point(45, 45);
-            this.uxSearchLabel.Name = "uxSearchLabel";
-            this.uxSearchLabel.Size = new System.Drawing.Size(75, 24);
-            this.uxSearchLabel.TabIndex = 5;
-            this.uxSearchLabel.Text = "Search:";
-            // 
-            // uxReleaseDatePicker
-            // 
-            this.uxReleaseDatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxReleaseDatePicker.Location = new System.Drawing.Point(23, 314);
-            this.uxReleaseDatePicker.Name = "uxReleaseDatePicker";
-            this.uxReleaseDatePicker.Size = new System.Drawing.Size(280, 26);
-            this.uxReleaseDatePicker.TabIndex = 2;
-            // 
-            // uxAddButton
-            // 
-            this.uxAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAddButton.Location = new System.Drawing.Point(23, 385);
-            this.uxAddButton.Name = "uxAddButton";
-            this.uxAddButton.Size = new System.Drawing.Size(148, 56);
-            this.uxAddButton.TabIndex = 3;
-            this.uxAddButton.Text = "Add";
-            this.uxAddButton.UseVisualStyleBackColor = true;
-            this.uxAddButton.Click += new System.EventHandler(this.uxAddButton_Click);
+            this.uxGenreLabel.AutoSize = true;
+            this.uxGenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxGenreLabel.Location = new System.Drawing.Point(19, 45);
+            this.uxGenreLabel.Name = "uxGenreLabel";
+            this.uxGenreLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxGenreLabel.TabIndex = 5;
+            this.uxGenreLabel.Text = "Search:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(485, 166);
+            this.label1.Location = new System.Drawing.Point(497, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
+            // 
+            // uxMovieStatsTab
+            // 
+            this.uxMovieStatsTab.Controls.Add(this.uxTotalEarningsPerRuntimeGroupsButton);
+            this.uxMovieStatsTab.Controls.Add(this.uxMostPopularDirectorsButton);
+            this.uxMovieStatsTab.Controls.Add(this.uxMovieEarningsButton);
+            this.uxMovieStatsTab.Location = new System.Drawing.Point(4, 29);
+            this.uxMovieStatsTab.Name = "uxMovieStatsTab";
+            this.uxMovieStatsTab.Size = new System.Drawing.Size(445, 528);
+            this.uxMovieStatsTab.TabIndex = 3;
+            this.uxMovieStatsTab.Text = "Movie Stats";
+            this.uxMovieStatsTab.UseVisualStyleBackColor = true;
+            // 
+            // uxTotalEarningsPerRuntimeGroupsButton
+            // 
+            this.uxTotalEarningsPerRuntimeGroupsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxTotalEarningsPerRuntimeGroupsButton.Location = new System.Drawing.Point(47, 221);
+            this.uxTotalEarningsPerRuntimeGroupsButton.Name = "uxTotalEarningsPerRuntimeGroupsButton";
+            this.uxTotalEarningsPerRuntimeGroupsButton.Size = new System.Drawing.Size(336, 53);
+            this.uxTotalEarningsPerRuntimeGroupsButton.TabIndex = 4;
+            this.uxTotalEarningsPerRuntimeGroupsButton.Text = "Total Earnings Per Runtime Groups";
+            this.uxTotalEarningsPerRuntimeGroupsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxMostPopularDirectorsButton
+            // 
+            this.uxMostPopularDirectorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMostPopularDirectorsButton.Location = new System.Drawing.Point(47, 133);
+            this.uxMostPopularDirectorsButton.Name = "uxMostPopularDirectorsButton";
+            this.uxMostPopularDirectorsButton.Size = new System.Drawing.Size(223, 53);
+            this.uxMostPopularDirectorsButton.TabIndex = 5;
+            this.uxMostPopularDirectorsButton.Text = "Most Popular Directors";
+            this.uxMostPopularDirectorsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxMovieEarningsButton
+            // 
+            this.uxMovieEarningsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieEarningsButton.Location = new System.Drawing.Point(47, 46);
+            this.uxMovieEarningsButton.Name = "uxMovieEarningsButton";
+            this.uxMovieEarningsButton.Size = new System.Drawing.Size(223, 53);
+            this.uxMovieEarningsButton.TabIndex = 6;
+            this.uxMovieEarningsButton.Text = "Movie Earnings";
+            this.uxMovieEarningsButton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Genre:";
+            // 
+            // uxActorLabel
+            // 
+            this.uxActorLabel.AutoSize = true;
+            this.uxActorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxActorLabel.Location = new System.Drawing.Point(31, 218);
+            this.uxActorLabel.Name = "uxActorLabel";
+            this.uxActorLabel.Size = new System.Drawing.Size(59, 24);
+            this.uxActorLabel.TabIndex = 1;
+            this.uxActorLabel.Text = "Actor:";
+            // 
+            // uxActorTextbox
+            // 
+            this.uxActorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxActorTextbox.Location = new System.Drawing.Point(35, 245);
+            this.uxActorTextbox.Name = "uxActorTextbox";
+            this.uxActorTextbox.Size = new System.Drawing.Size(191, 29);
+            this.uxActorTextbox.TabIndex = 0;
+            // 
+            // uxGenreComboBox
+            // 
+            this.uxGenreComboBox.FormattingEnabled = true;
+            this.uxGenreComboBox.Items.AddRange(new object[] {
+            "Action",
+            "Animation",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Experimental",
+            "Fantasy",
+            "Historical",
+            "Horror",
+            "Romance",
+            "ScienceFiction",
+            "Thriller",
+            "Western",
+            "Other"});
+            this.uxGenreComboBox.Location = new System.Drawing.Point(35, 157);
+            this.uxGenreComboBox.Name = "uxGenreComboBox";
+            this.uxGenreComboBox.Size = new System.Drawing.Size(190, 28);
+            this.uxGenreComboBox.TabIndex = 2;
             // 
             // uxOutputLabel
             // 
@@ -329,7 +397,7 @@ namespace CIS560Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 746);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.uxSearchLabel);
+            this.Controls.Add(this.uxGenreLabel);
             this.Controls.Add(this.uxSearchTabControl);
             this.Controls.Add(this.uxTopTenListView);
             this.Controls.Add(this.uxSearchButton);
@@ -343,6 +411,7 @@ namespace CIS560Project
             this.uxTheatersTab.PerformLayout();
             this.uxAddMovieTab.ResumeLayout(false);
             this.uxAddMovieTab.PerformLayout();
+            this.uxMovieStatsTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,10 +429,7 @@ namespace CIS560Project
         private System.Windows.Forms.DateTimePicker uxDatePicker;
         private System.Windows.Forms.Label uxMovieIdLabel;
         private System.Windows.Forms.TextBox uxMovieIdTextbox;
-        private System.Windows.Forms.Label uxSearchLabel;
-        private System.Windows.Forms.Button uxMovieEarningsButton;
-        private System.Windows.Forms.Button uxMostPopularDirectorsButton;
-        private System.Windows.Forms.Button uxTotalEarningsPerRuntimeGroupsButton;
+        private System.Windows.Forms.Label uxGenreLabel;
         private System.Windows.Forms.TabPage uxAddMovieTab;
         private System.Windows.Forms.TextBox uxRuntimeMinutesTextbox;
         private System.Windows.Forms.TextBox uxRatingTextbox;
@@ -375,6 +441,14 @@ namespace CIS560Project
         private System.Windows.Forms.Button uxAddButton;
         private System.Windows.Forms.DateTimePicker uxReleaseDatePicker;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage uxMovieStatsTab;
+        private System.Windows.Forms.Button uxTotalEarningsPerRuntimeGroupsButton;
+        private System.Windows.Forms.Button uxMostPopularDirectorsButton;
+        private System.Windows.Forms.Button uxMovieEarningsButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox uxGenreComboBox;
+        private System.Windows.Forms.Label uxActorLabel;
+        private System.Windows.Forms.TextBox uxActorTextbox;
     }
 }
 
