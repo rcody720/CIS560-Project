@@ -1,7 +1,7 @@
 ﻿
 namespace CIS560Project
 {
-    partial class uxOutputLabel
+    partial class uxForm
     {
         /// <summary>
         /// Required designer variable.
@@ -284,9 +284,9 @@ namespace CIS560Project
             this.uxGenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxGenreLabel.Location = new System.Drawing.Point(23, 45);
             this.uxGenreLabel.Name = "uxGenreLabel";
-            this.uxGenreLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxGenreLabel.Size = new System.Drawing.Size(131, 24);
             this.uxGenreLabel.TabIndex = 5;
-            this.uxGenreLabel.Text = "Search:";
+            this.uxGenreLabel.Text = "Movie Search:";
             // 
             // label1
             // 
@@ -391,7 +391,7 @@ namespace CIS560Project
             this.uxGenreComboBox.Size = new System.Drawing.Size(190, 28);
             this.uxGenreComboBox.TabIndex = 2;
             // 
-            // uxOutputLabel
+            // uxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -402,8 +402,8 @@ namespace CIS560Project
             this.Controls.Add(this.uxTopTenListView);
             this.Controls.Add(this.uxSearchButton);
             this.Controls.Add(this.uxSearchTextbox);
-            this.Name = "uxOutputLabel";
-            this.Text = "Form1";
+            this.Name = "uxForm";
+            this.Text = "Movie Database";
             this.uxSearchTabControl.ResumeLayout(false);
             this.uxMoviesTab.ResumeLayout(false);
             this.uxMoviesTab.PerformLayout();
