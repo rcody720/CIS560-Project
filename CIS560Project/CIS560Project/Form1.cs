@@ -51,7 +51,7 @@ namespace CIS560Project
             StringBuilder sb = new StringBuilder();
             foreach(var item in result)
             {
-                sb.AppendFormat("{0} - {1}{2}", item.Key, item.Value, Environment.NewLine);
+                sb.AppendFormat("{0} - {1}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
             }
             MessageBox.Show(sb.ToString().TrimEnd());
         }
