@@ -13,12 +13,13 @@ namespace CIS560Project
 {
     public partial class Form1 : Form
     {
-        private SqlMovieRepository repo = new SqlMovieRepository(@"Server=mssql.cs.ksu.edu;Database=rcody720;User ID=rcody720;Password=@dr93/cr99&Kr60&Cr53;Integrated Security=False;");
+        private readonly SqlMovieRepository MovieRepo = new SqlMovieRepository(@"Server=mssql.cs.ksu.edu;Database=rcody720;User ID=rcody720;Password=@dr93/cr99&Kr60&Cr53;Integrated Security=False;");
+        private readonly SqlDirectorRepository DirectorRepo = new SqlDirectorRepository(@"Server=...");
         public Form1()
         {
             InitializeComponent();
 
-            IReadOnlyList<Movie> movies = repo.GetRecentMovies();
+            IReadOnlyList<Movie> movies = MovieRepo.GetRecentMovies();
 
             foreach(Movie m in movies)
             {
@@ -31,13 +32,13 @@ namespace CIS560Project
         {
             if(uxSearchTextbox.Text != null)
             {
-                Movie result = repo.GetMovie(uxSearchTextbox.Text);
+                Movie result = MovieRepo.GetMovie(uxSearchTextbox.Text);
                 MessageBox.Show(string.Format($"Movie: {0}\n Rating: {1}\nRunTime: {2}\nReleaseDate: {3}",
                     result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
             }
             else if (uxMovieIdTextbox.Text != null)
             {
-                Movie result = repo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
+                Movie result = MovieRepo.FetchMovie(Convert.ToInt32(uxMovieIdTextbox.Text));
                 MessageBox.Show(string.Format($"Movie: {0}\n Rating: {1}\nRunTime: {2}\nReleaseDate: {3}", 
                     result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate));
             }
@@ -46,11 +47,22 @@ namespace CIS560Project
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
         {
-            Dictionary<Movie, int> result = repo.GetTheaterSales();
+            Dictionary<Movie, int> result = MovieRepo.GetTheaterSales();
             StringBuilder sb = new StringBuilder();
             foreach(var item in result)
             {
                 sb.AppendFormat("{0} - {1}{2}", item.Key, item.Value, Environment.NewLine);
+            }
+            MessageBox.Show(sb.ToString().TrimEnd());
+        }
+
+        private void uxMostPopularDirectorsButton_Click(object sender, EventArgs e)
+        {
+            IReadOnlyList<Director> result = DirectorRepo.GetDirectorRatings();
+            StringBuilder sb = new StringBuilder();
+            foreach(Director d in result)
+            {
+                sb.AppendFormat("{0} {1}{2}", d.FirstName, d.LastName, Environment.NewLine);
             }
             MessageBox.Show(sb.ToString().TrimEnd());
         }

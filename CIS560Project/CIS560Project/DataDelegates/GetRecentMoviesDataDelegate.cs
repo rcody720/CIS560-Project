@@ -24,7 +24,7 @@ namespace CIS560Project.DataDelegates
 
             while (reader.Read())
             {
-                movies.Add(new Movie(reader.GetInt32("MovieId"), reader.GetString("MovieName"),
+                movies.Add(new Movie(reader.GetInt32("MovieId"), reader.GetString("MovieTitle"),
                     reader.GetString("Rating"), reader.GetInt32("RunTime"),
                     reader.GetDateTime("ReleaseDate")));
             }

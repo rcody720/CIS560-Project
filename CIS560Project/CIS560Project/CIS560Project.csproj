@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetDirectorRatings.cs" />
     <Compile Include="DataDelegates\GetMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetRecentMoviesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetTheaterSalesDataDelegate.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDirectorRepository.cs" />
     <Compile Include="IMovieRepository.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Director.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Models\Theater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlDirectorRepository.cs" />
     <Compile Include="SqlMovieRepository.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

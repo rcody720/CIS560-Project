@@ -40,6 +40,8 @@ namespace CIS560Project
         /// <returns>The resulting instance of Movie.</returns>
         Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate);
 
+        IReadOnlyList<Movie> GetRecentMovies();
 
+        Dictionary<Movie, int> GetTheaterSales();
     }
 }

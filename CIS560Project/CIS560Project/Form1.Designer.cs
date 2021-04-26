@@ -34,13 +34,14 @@ namespace CIS560Project
             this.uxTopTenListView = new System.Windows.Forms.ListView();
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
+            this.uxMovieEarningsButton = new System.Windows.Forms.Button();
             this.uxMovieIdLabel = new System.Windows.Forms.Label();
             this.uxMovieIdTextbox = new System.Windows.Forms.TextBox();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxSearchLabel = new System.Windows.Forms.Label();
-            this.uxMovieEarningsButton = new System.Windows.Forms.Button();
+            this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -88,6 +89,7 @@ namespace CIS560Project
             // 
             // uxMoviesTab
             // 
+            this.uxMoviesTab.Controls.Add(this.uxMostPopularDirectorsButton);
             this.uxMoviesTab.Controls.Add(this.uxMovieEarningsButton);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdLabel);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdTextbox);
@@ -99,6 +101,17 @@ namespace CIS560Project
             this.uxMoviesTab.TabIndex = 0;
             this.uxMoviesTab.Text = "Movies";
             this.uxMoviesTab.UseVisualStyleBackColor = true;
+            // 
+            // uxMovieEarningsButton
+            // 
+            this.uxMovieEarningsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieEarningsButton.Location = new System.Drawing.Point(59, 119);
+            this.uxMovieEarningsButton.Name = "uxMovieEarningsButton";
+            this.uxMovieEarningsButton.Size = new System.Drawing.Size(223, 53);
+            this.uxMovieEarningsButton.TabIndex = 3;
+            this.uxMovieEarningsButton.Text = "Movie Earnings";
+            this.uxMovieEarningsButton.UseVisualStyleBackColor = true;
+            this.uxMovieEarningsButton.Click += new System.EventHandler(this.uxMovieEarningsButton_Click);
             // 
             // uxMovieIdLabel
             // 
@@ -158,16 +171,16 @@ namespace CIS560Project
             this.uxSearchLabel.TabIndex = 5;
             this.uxSearchLabel.Text = "Search:";
             // 
-            // uxMovieEarningsButton
+            // uxMostPopularDirectorsButton
             // 
-            this.uxMovieEarningsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMovieEarningsButton.Location = new System.Drawing.Point(59, 119);
-            this.uxMovieEarningsButton.Name = "uxMovieEarningsButton";
-            this.uxMovieEarningsButton.Size = new System.Drawing.Size(189, 53);
-            this.uxMovieEarningsButton.TabIndex = 3;
-            this.uxMovieEarningsButton.Text = "Movie Earnings";
-            this.uxMovieEarningsButton.UseVisualStyleBackColor = true;
-            this.uxMovieEarningsButton.Click += new System.EventHandler(this.uxMovieEarningsButton_Click);
+            this.uxMostPopularDirectorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMostPopularDirectorsButton.Location = new System.Drawing.Point(59, 213);
+            this.uxMostPopularDirectorsButton.Name = "uxMostPopularDirectorsButton";
+            this.uxMostPopularDirectorsButton.Size = new System.Drawing.Size(223, 53);
+            this.uxMostPopularDirectorsButton.TabIndex = 3;
+            this.uxMostPopularDirectorsButton.Text = "Most Popular Directors";
+            this.uxMostPopularDirectorsButton.UseVisualStyleBackColor = true;
+            this.uxMostPopularDirectorsButton.Click += new System.EventHandler(this.uxMostPopularDirectorsButton_Click);
             // 
             // Form1
             // 
@@ -205,6 +218,7 @@ namespace CIS560Project
         private System.Windows.Forms.TextBox uxMovieIdTextbox;
         private System.Windows.Forms.Label uxSearchLabel;
         private System.Windows.Forms.Button uxMovieEarningsButton;
+        private System.Windows.Forms.Button uxMostPopularDirectorsButton;
     }
 }
 
