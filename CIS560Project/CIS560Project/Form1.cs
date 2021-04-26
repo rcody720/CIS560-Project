@@ -11,11 +11,11 @@ using CIS560Project.Models;
 
 namespace CIS560Project
 {
-    public partial class uxOutputLabel : Form
+    public partial class uxForm : Form
     {
         private readonly SqlMovieRepository MovieRepo = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Integrated Security=False;");
         private readonly SqlDirectorRepository DirectorRepo = new SqlDirectorRepository(@"Server=(localdb)\MSSQLLocalDb;Integrated Security=False;");
-        public uxOutputLabel()
+        public uxForm()
         {
             InitializeComponent();
 
