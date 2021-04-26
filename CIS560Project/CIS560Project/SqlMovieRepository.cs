@@ -73,5 +73,11 @@ namespace CIS560Project
             var d = new GetEarningsRankingsBasedOnRuntimeDataDelegate();
             return executor.ExecuteReader(d);
         }
+
+        public Dictionary<string, (string, string)> GetShowings(DateTime currentDate)
+        {
+            var d = new GetShowingsDataDelegate(currentDate);
+            return executor.ExecuteReader(d);
+        }
     }
 }

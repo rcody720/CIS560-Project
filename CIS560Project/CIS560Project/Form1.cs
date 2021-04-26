@@ -94,5 +94,17 @@ namespace CIS560Project
                 uxTopTenListView.Items.Add(sb.ToString());
             }
         }
+
+        private void uxDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Dictionary<string, (string, string)> result = MovieRepo.GetShowings(uxDatePicker.Value);
+            uxTopTenListView.Items.Clear();
+            foreach(var item in result)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("{0} - {1} : {2}", item.Key, item.Value.Item1, item.Value.Item2);
+                uxTopTenListView.Items.Add(sb.ToString());
+            }
+        }
     }
 }

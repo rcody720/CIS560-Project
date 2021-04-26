@@ -162,7 +162,7 @@ namespace CIS560Project
             this.uxTheatersTab.Location = new System.Drawing.Point(4, 29);
             this.uxTheatersTab.Name = "uxTheatersTab";
             this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxTheatersTab.Size = new System.Drawing.Size(607, 528);
+            this.uxTheatersTab.Size = new System.Drawing.Size(426, 528);
             this.uxTheatersTab.TabIndex = 1;
             this.uxTheatersTab.Text = "Theaters";
             this.uxTheatersTab.UseVisualStyleBackColor = true;
@@ -185,6 +185,7 @@ namespace CIS560Project
             this.uxDatePicker.Name = "uxDatePicker";
             this.uxDatePicker.Size = new System.Drawing.Size(339, 26);
             this.uxDatePicker.TabIndex = 0;
+            this.uxDatePicker.ValueChanged += new System.EventHandler(this.uxDatePicker_ValueChanged);
             // 
             // uxSearchLabel
             // 
