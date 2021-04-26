@@ -43,5 +43,16 @@ namespace CIS560Project
             }
             
         }
+
+        private void uxMovieEarningsButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<Movie, int> result = repo.GetTheaterSales();
+            StringBuilder sb = new StringBuilder();
+            foreach(var item in result)
+            {
+                sb.AppendFormat("{0} - {1}{2}", item.Key, item.Value, Environment.NewLine);
+            }
+            MessageBox.Show(sb.ToString().TrimEnd());
+        }
     }
 }

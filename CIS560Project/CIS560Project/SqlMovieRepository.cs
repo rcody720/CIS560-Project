@@ -61,5 +61,11 @@ namespace CIS560Project
             var d = new GetRecentMoviesDataDelegate();
             return executor.ExecuteReader(d);
         }
+
+        public Dictionary<Movie, int> GetTheaterSales()
+        {
+            var d = new GetTheaterSalesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
     }
 }
