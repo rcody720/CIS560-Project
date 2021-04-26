@@ -120,8 +120,9 @@ namespace CIS560Project
                 MessageBox.Show("Invalid Input. Try again.");
             }
 
-            
-
+            uxMovieTitleTextbox.Text = "";
+            uxRatingTextbox.Text = "";
+            uxRuntimeMinutesTextbox.Text = "";
         }
     }
 }
