@@ -18,7 +18,7 @@ namespace CIS560Project.DataDelegates
         private readonly DateTime ReleaseDate;
 
         public CreateMovieDataDelegate(string movieName, string rating, int runTime, DateTime releaseDate)
-            : base("Movie.CreateMovie")
+            : base("Movies.CreateMovie")
         {
             this.MovieName = movieName;
             this.Rating = rating;
