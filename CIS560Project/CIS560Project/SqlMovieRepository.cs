@@ -62,7 +62,7 @@ namespace CIS560Project
             return executor.ExecuteReader(d);
         }
 
-        public Dictionary<Movie, int> GetTheaterSales()
+        public Dictionary<Movie, double> GetTheaterSales()
         {
             var d = new GetTheaterSalesDataDelegate();
             return executor.ExecuteReader(d);

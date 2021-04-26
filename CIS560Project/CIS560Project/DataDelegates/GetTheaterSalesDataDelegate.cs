@@ -10,21 +10,21 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
-    internal class GetTheaterSalesDataDelegate : DataReaderDelegate<Dictionary<Movie, int>>
+    internal class GetTheaterSalesDataDelegate : DataReaderDelegate<Dictionary<Movie, double>>
     { 
         public GetTheaterSalesDataDelegate()
             : base("Movies.TheaterSalesRank")
         {
         }
 
-        public override Dictionary<Movie, int> Translate(SqlCommand command, IDataRowReader reader)
+        public override Dictionary<Movie, double> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var movies = new Dictionary<Movie, int>();
+            var movies = new Dictionary<Movie, double>();
 
             while (reader.Read())
             {
                 movies.Add(new Movie(reader.GetInt32("MovieId"), reader.GetString("MovieTitle"), reader.GetString("Rating"),
-                    reader.GetInt32("RuntimeMinutes"), reader.GetDateTime("ReleaseDate")), reader.GetInt32("TheaterSales"));
+                    reader.GetInt32("RuntimeMinutes"), reader.GetDateTime("ReleaseDate")), reader.GetDouble("TheaterSales"));
             }
 
             return movies;

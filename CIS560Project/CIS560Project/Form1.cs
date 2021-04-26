@@ -47,7 +47,7 @@ namespace CIS560Project
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
         {
-            Dictionary<Movie, int> result = MovieRepo.GetTheaterSales();
+            Dictionary<Movie, double> result = MovieRepo.GetTheaterSales();
             StringBuilder sb = new StringBuilder();
             foreach(var item in result)
             {
