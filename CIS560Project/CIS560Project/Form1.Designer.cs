@@ -1,7 +1,7 @@
 ﻿
 namespace CIS560Project
 {
-    partial class Form1
+    partial class uxOutputLabel
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@ namespace CIS560Project
             this.uxSearchLabel = new System.Windows.Forms.Label();
             this.uxReleaseDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxAddButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -310,17 +311,28 @@ namespace CIS560Project
             this.uxAddButton.UseVisualStyleBackColor = true;
             this.uxAddButton.Click += new System.EventHandler(this.uxAddButton_Click);
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(485, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Output:";
+            // 
+            // uxOutputLabel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 746);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.uxSearchLabel);
             this.Controls.Add(this.uxSearchTabControl);
             this.Controls.Add(this.uxTopTenListView);
             this.Controls.Add(this.uxSearchButton);
             this.Controls.Add(this.uxSearchTextbox);
-            this.Name = "Form1";
+            this.Name = "uxOutputLabel";
             this.Text = "Form1";
             this.uxSearchTabControl.ResumeLayout(false);
             this.uxMoviesTab.ResumeLayout(false);
@@ -360,6 +372,7 @@ namespace CIS560Project
         private System.Windows.Forms.Label uxMovieTitleLabel;
         private System.Windows.Forms.Button uxAddButton;
         private System.Windows.Forms.DateTimePicker uxReleaseDatePicker;
+        private System.Windows.Forms.Label label1;
     }
 }
 
