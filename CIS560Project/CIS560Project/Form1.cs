@@ -49,7 +49,7 @@ namespace CIS560Project
                 foreach(Movie m in result)
                 {
                     sb.AppendFormat("{0}{1}{2}{3}{4}{5}{6}{7}", m.MovieName, Environment.NewLine, m.Rating, Environment.NewLine,
-                        m.RunTime.ToString(), Environment.NewLine, m.ReleaseDate);
+                        m.RunTime.ToString(), Environment.NewLine, m.ReleaseDate, Environment.NewLine);
                 }
                 MessageBox.Show(sb.ToString());
             }
