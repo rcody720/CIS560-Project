@@ -66,5 +66,16 @@ namespace CIS560Project
             }
             MessageBox.Show(sb.ToString().TrimEnd());
         }
+
+        private void uxTotalEarningsPerRuntimeGroups_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, double> result = MovieRepo.GetEarningsRankingsBasedOnRuntime();
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in result)
+            {
+                sb.AppendFormat("{0} - {1}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
+            }
+            MessageBox.Show(sb.ToString().TrimEnd());
+        }
     }
 }

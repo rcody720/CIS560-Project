@@ -67,5 +67,11 @@ namespace CIS560Project
             var d = new GetTheaterSalesDataDelegate();
             return executor.ExecuteReader(d);
         }
+
+        public Dictionary<string, double> GetEarningsRankingsBasedOnRuntime()
+        {
+            var d = new GetEarningsRankingsBasedOnRuntimeDataDelegate();
+            return executor.ExecuteReader(d);
+        }
     }
 }
