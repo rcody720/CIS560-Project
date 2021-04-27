@@ -6,12 +6,6 @@ CREATE OR ALTER PROCEDURE Movies.CreateUserReview
    @ReviewerId INT OUTPUT
 AS
 
-/*INSERT Movies.UserReviews(MovieID, ReviewerID, Score)
-SELECT M.MovieID, R.ReviewerID, @Score
-FROM Movies.Reviewer R
-    CROSS JOIN Movies.Movie M
-WHERE M.MovieTitle = @MovieTitle AND R.Username = @Username*/
-
 WITH SourceCte(MovieID, ReviewerID, Score) AS 
 (
     SELECT M.MovieID, R.ReviewerID, @Score
@@ -30,6 +24,6 @@ WHEN MATCHED THEN
 WHEN NOT MATCHED THEN
     INSERT(MovieID, ReviewerID, Score)
     VALUES(S.MovieID, S.ReviewerID, S.Score);
-    SET @MovieId = S.MovieID,
-        @ReviewerID = S.ReviewerID
+    SET @MovieId = S.MovieID
+    SET @ReviewerID = S.ReviewerID
 GO

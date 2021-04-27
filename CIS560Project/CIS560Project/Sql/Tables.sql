@@ -67,7 +67,7 @@ CREATE TABLE Movies.MovieDirector
 (
     MovieId INT NOT NULL,
     DirectorId INT NOT NULL,
-    Salary INT
+    Salary INT NOT NULL
 
     FOREIGN KEY(MovieId)
     REFERENCES Movies.Movie(MovieId),
