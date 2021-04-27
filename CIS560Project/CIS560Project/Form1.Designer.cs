@@ -35,9 +35,11 @@ namespace CIS560Project
             this.uxSearchTabControl = new System.Windows.Forms.TabControl();
             this.uxMoviesTab = new System.Windows.Forms.TabPage();
             this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
+            this.uxDirectorLabel = new System.Windows.Forms.Label();
             this.uxActorLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uxMovieIdLabel = new System.Windows.Forms.Label();
+            this.uxDirectorTextbox = new System.Windows.Forms.TextBox();
             this.uxActorTextbox = new System.Windows.Forms.TextBox();
             this.uxMovieIdTextbox = new System.Windows.Forms.TextBox();
             this.uxTheatersTab = new System.Windows.Forms.TabPage();
@@ -59,13 +61,20 @@ namespace CIS560Project
             this.uxMovieEarningsButton = new System.Windows.Forms.Button();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uxDirectorLabel = new System.Windows.Forms.Label();
-            this.uxDirectorTextbox = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uxReviewMovieTitleTextbox = new System.Windows.Forms.TextBox();
+            this.uxReviewMovieTitleLabel = new System.Windows.Forms.Label();
+            this.uxUsernameLabel = new System.Windows.Forms.Label();
+            this.uxUsernameTextbox = new System.Windows.Forms.TextBox();
+            this.uxScoreLabel = new System.Windows.Forms.Label();
+            this.uxScoreUpDown = new System.Windows.Forms.NumericUpDown();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
             this.uxAddMovieTab.SuspendLayout();
             this.uxMovieStatsTab.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxScoreUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // uxSearchTextbox
@@ -95,9 +104,9 @@ namespace CIS560Project
             this.uxTopTenListView.BackColor = System.Drawing.Color.White;
             this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
-            this.uxTopTenListView.Location = new System.Drawing.Point(501, 195);
+            this.uxTopTenListView.Location = new System.Drawing.Point(559, 195);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(854, 528);
+            this.uxTopTenListView.Size = new System.Drawing.Size(796, 528);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -108,11 +117,12 @@ namespace CIS560Project
             this.uxSearchTabControl.Controls.Add(this.uxTheatersTab);
             this.uxSearchTabControl.Controls.Add(this.uxAddMovieTab);
             this.uxSearchTabControl.Controls.Add(this.uxMovieStatsTab);
+            this.uxSearchTabControl.Controls.Add(this.tabPage1);
             this.uxSearchTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxSearchTabControl.Location = new System.Drawing.Point(23, 166);
             this.uxSearchTabControl.Name = "uxSearchTabControl";
             this.uxSearchTabControl.SelectedIndex = 0;
-            this.uxSearchTabControl.Size = new System.Drawing.Size(453, 561);
+            this.uxSearchTabControl.Size = new System.Drawing.Size(526, 557);
             this.uxSearchTabControl.TabIndex = 4;
             // 
             // uxMoviesTab
@@ -130,7 +140,7 @@ namespace CIS560Project
             this.uxMoviesTab.Location = new System.Drawing.Point(4, 29);
             this.uxMoviesTab.Name = "uxMoviesTab";
             this.uxMoviesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxMoviesTab.Size = new System.Drawing.Size(445, 528);
+            this.uxMoviesTab.Size = new System.Drawing.Size(518, 524);
             this.uxMoviesTab.TabIndex = 0;
             this.uxMoviesTab.Text = "Advanced Movie Search";
             // 
@@ -156,6 +166,17 @@ namespace CIS560Project
             this.uxGenreComboBox.Name = "uxGenreComboBox";
             this.uxGenreComboBox.Size = new System.Drawing.Size(190, 28);
             this.uxGenreComboBox.TabIndex = 2;
+            // 
+            // uxDirectorLabel
+            // 
+            this.uxDirectorLabel.AutoSize = true;
+            this.uxDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxDirectorLabel.ForeColor = System.Drawing.Color.White;
+            this.uxDirectorLabel.Location = new System.Drawing.Point(31, 313);
+            this.uxDirectorLabel.Name = "uxDirectorLabel";
+            this.uxDirectorLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxDirectorLabel.TabIndex = 1;
+            this.uxDirectorLabel.Text = "Director";
             // 
             // uxActorLabel
             // 
@@ -190,6 +211,14 @@ namespace CIS560Project
             this.uxMovieIdLabel.TabIndex = 1;
             this.uxMovieIdLabel.Text = "Movie ID:";
             // 
+            // uxDirectorTextbox
+            // 
+            this.uxDirectorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxDirectorTextbox.Location = new System.Drawing.Point(34, 340);
+            this.uxDirectorTextbox.Name = "uxDirectorTextbox";
+            this.uxDirectorTextbox.Size = new System.Drawing.Size(191, 29);
+            this.uxDirectorTextbox.TabIndex = 0;
+            // 
             // uxActorTextbox
             // 
             this.uxActorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +243,7 @@ namespace CIS560Project
             this.uxTheatersTab.Location = new System.Drawing.Point(4, 29);
             this.uxTheatersTab.Name = "uxTheatersTab";
             this.uxTheatersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.uxTheatersTab.Size = new System.Drawing.Size(445, 528);
+            this.uxTheatersTab.Size = new System.Drawing.Size(518, 524);
             this.uxTheatersTab.TabIndex = 1;
             this.uxTheatersTab.Text = "Theaters";
             // 
@@ -254,7 +283,7 @@ namespace CIS560Project
             this.uxAddMovieTab.Controls.Add(this.uxMovieTitleLabel);
             this.uxAddMovieTab.Location = new System.Drawing.Point(4, 29);
             this.uxAddMovieTab.Name = "uxAddMovieTab";
-            this.uxAddMovieTab.Size = new System.Drawing.Size(445, 528);
+            this.uxAddMovieTab.Size = new System.Drawing.Size(518, 524);
             this.uxAddMovieTab.TabIndex = 2;
             this.uxAddMovieTab.Text = "Add Movie";
             // 
@@ -355,7 +384,7 @@ namespace CIS560Project
             this.uxMovieStatsTab.Controls.Add(this.uxMovieEarningsButton);
             this.uxMovieStatsTab.Location = new System.Drawing.Point(4, 29);
             this.uxMovieStatsTab.Name = "uxMovieStatsTab";
-            this.uxMovieStatsTab.Size = new System.Drawing.Size(445, 528);
+            this.uxMovieStatsTab.Size = new System.Drawing.Size(518, 524);
             this.uxMovieStatsTab.TabIndex = 3;
             this.uxMovieStatsTab.Text = "Movie Stats";
             // 
@@ -416,30 +445,83 @@ namespace CIS560Project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(497, 166);
+            this.label1.Location = new System.Drawing.Point(555, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
             // 
-            // uxDirectorLabel
+            // tabPage1
             // 
-            this.uxDirectorLabel.AutoSize = true;
-            this.uxDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDirectorLabel.ForeColor = System.Drawing.Color.White;
-            this.uxDirectorLabel.Location = new System.Drawing.Point(31, 313);
-            this.uxDirectorLabel.Name = "uxDirectorLabel";
-            this.uxDirectorLabel.Size = new System.Drawing.Size(75, 24);
-            this.uxDirectorLabel.TabIndex = 1;
-            this.uxDirectorLabel.Text = "Director";
+            this.tabPage1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tabPage1.Controls.Add(this.uxScoreUpDown);
+            this.tabPage1.Controls.Add(this.uxUsernameTextbox);
+            this.tabPage1.Controls.Add(this.uxReviewMovieTitleTextbox);
+            this.tabPage1.Controls.Add(this.uxScoreLabel);
+            this.tabPage1.Controls.Add(this.uxUsernameLabel);
+            this.tabPage1.Controls.Add(this.uxReviewMovieTitleLabel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(518, 524);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Reviews";
             // 
-            // uxDirectorTextbox
+            // uxReviewMovieTitleTextbox
             // 
-            this.uxDirectorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDirectorTextbox.Location = new System.Drawing.Point(34, 340);
-            this.uxDirectorTextbox.Name = "uxDirectorTextbox";
-            this.uxDirectorTextbox.Size = new System.Drawing.Size(191, 29);
-            this.uxDirectorTextbox.TabIndex = 0;
+            this.uxReviewMovieTitleTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxReviewMovieTitleTextbox.Location = new System.Drawing.Point(39, 164);
+            this.uxReviewMovieTitleTextbox.Name = "uxReviewMovieTitleTextbox";
+            this.uxReviewMovieTitleTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxReviewMovieTitleTextbox.TabIndex = 3;
+            // 
+            // uxReviewMovieTitleLabel
+            // 
+            this.uxReviewMovieTitleLabel.AutoSize = true;
+            this.uxReviewMovieTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxReviewMovieTitleLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxReviewMovieTitleLabel.Location = new System.Drawing.Point(35, 137);
+            this.uxReviewMovieTitleLabel.Name = "uxReviewMovieTitleLabel";
+            this.uxReviewMovieTitleLabel.Size = new System.Drawing.Size(106, 24);
+            this.uxReviewMovieTitleLabel.TabIndex = 2;
+            this.uxReviewMovieTitleLabel.Text = "Movie Title:";
+            // 
+            // uxUsernameLabel
+            // 
+            this.uxUsernameLabel.AutoSize = true;
+            this.uxUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUsernameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxUsernameLabel.Location = new System.Drawing.Point(35, 42);
+            this.uxUsernameLabel.Name = "uxUsernameLabel";
+            this.uxUsernameLabel.Size = new System.Drawing.Size(102, 24);
+            this.uxUsernameLabel.TabIndex = 2;
+            this.uxUsernameLabel.Text = "Username:";
+            // 
+            // uxUsernameTextbox
+            // 
+            this.uxUsernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUsernameTextbox.Location = new System.Drawing.Point(39, 69);
+            this.uxUsernameTextbox.Name = "uxUsernameTextbox";
+            this.uxUsernameTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxUsernameTextbox.TabIndex = 3;
+            // 
+            // uxScoreLabel
+            // 
+            this.uxScoreLabel.AutoSize = true;
+            this.uxScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxScoreLabel.Location = new System.Drawing.Point(35, 236);
+            this.uxScoreLabel.Name = "uxScoreLabel";
+            this.uxScoreLabel.Size = new System.Drawing.Size(128, 24);
+            this.uxScoreLabel.TabIndex = 2;
+            this.uxScoreLabel.Text = "Score (0 - 10):";
+            // 
+            // uxScoreUpDown
+            // 
+            this.uxScoreUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxScoreUpDown.Location = new System.Drawing.Point(39, 263);
+            this.uxScoreUpDown.Name = "uxScoreUpDown";
+            this.uxScoreUpDown.Size = new System.Drawing.Size(229, 29);
+            this.uxScoreUpDown.TabIndex = 4;
             // 
             // uxForm
             // 
@@ -463,6 +545,9 @@ namespace CIS560Project
             this.uxAddMovieTab.ResumeLayout(false);
             this.uxAddMovieTab.PerformLayout();
             this.uxMovieStatsTab.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxScoreUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,6 +587,13 @@ namespace CIS560Project
         private System.Windows.Forms.TextBox uxActorTextbox;
         private System.Windows.Forms.Label uxDirectorLabel;
         private System.Windows.Forms.TextBox uxDirectorTextbox;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox uxUsernameTextbox;
+        private System.Windows.Forms.TextBox uxReviewMovieTitleTextbox;
+        private System.Windows.Forms.Label uxScoreLabel;
+        private System.Windows.Forms.Label uxUsernameLabel;
+        private System.Windows.Forms.Label uxReviewMovieTitleLabel;
+        private System.Windows.Forms.NumericUpDown uxScoreUpDown;
     }
 }
 
