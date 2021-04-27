@@ -358,6 +358,8 @@ namespace CIS560Project
             // uxTotalEarningsPerRuntimeGroupsButton
             // 
             this.uxTotalEarningsPerRuntimeGroupsButton.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.uxTotalEarningsPerRuntimeGroupsButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.uxTotalEarningsPerRuntimeGroupsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uxTotalEarningsPerRuntimeGroupsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTotalEarningsPerRuntimeGroupsButton.ForeColor = System.Drawing.SystemColors.Control;
             this.uxTotalEarningsPerRuntimeGroupsButton.Location = new System.Drawing.Point(47, 221);
