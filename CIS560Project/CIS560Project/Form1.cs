@@ -139,6 +139,12 @@ namespace CIS560Project
             uxRuntimeMinutesTextbox.Text = "";
         }
 
+        private void uxAddReviewButton_Click(object sender, EventArgs e)
+        {
+            MovieRepo.CreateUserReview(uxUsernameTextbox.Text, uxReviewMovieTitleTextbox.Text, (double)uxScoreUpDown.Value);
+            uxTopTenListView.Clear();
+        }
+
         private void DisplayMovie(Movie m)
         {
             uxTopTenListView.Items.Clear();
@@ -157,6 +163,8 @@ namespace CIS560Project
                 uxTopTenListView.Items.Add("");
             }
         }
+
+
 
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateUserReviewDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDirectorRatings.cs" />
     <Compile Include="DataDelegates\GetEarningsRankingsBasedOnRuntimeDataDelegate.cs" />
@@ -115,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data.sql" />
+    <Content Include="Sql\Movies.CreateUserReview.sql" />
     <Content Include="Sql\Movies.DirectorRatings.sql" />
     <Content Include="Sql\DropTables.sql" />
     <Content Include="Sql\Movies.EarningsRankingsBasedOnRuntime.sql" />

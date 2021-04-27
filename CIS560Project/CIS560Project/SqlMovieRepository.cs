@@ -94,5 +94,20 @@ namespace CIS560Project
             var d = new GetMoviesByDirectorDataDelegate(firstName, lastName);
             return executor.ExecuteReader(d);
         }
+
+        public MovieReview CreateUserReview(string username, string movieTitle, double score)
+        {
+            if (string.IsNullOrWhiteSpace(username))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(username));
+
+            if (string.IsNullOrWhiteSpace(movieTitle))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(movieTitle));
+
+            if (score == 0)
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(score));
+
+            var curdd = new CreateUserReviewDataDelegate(username, movieTitle, score);
+            return executor.ExecuteNonQuery(curdd);
+        }
     }
 }

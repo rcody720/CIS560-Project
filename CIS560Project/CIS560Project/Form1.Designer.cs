@@ -68,6 +68,7 @@ namespace CIS560Project
             this.uxUsernameTextbox = new System.Windows.Forms.TextBox();
             this.uxScoreLabel = new System.Windows.Forms.Label();
             this.uxScoreUpDown = new System.Windows.Forms.NumericUpDown();
+            this.uxAddReviewButton = new System.Windows.Forms.Button();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -454,6 +455,7 @@ namespace CIS560Project
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tabPage1.Controls.Add(this.uxAddReviewButton);
             this.tabPage1.Controls.Add(this.uxScoreUpDown);
             this.tabPage1.Controls.Add(this.uxUsernameTextbox);
             this.tabPage1.Controls.Add(this.uxReviewMovieTitleTextbox);
@@ -522,6 +524,19 @@ namespace CIS560Project
             this.uxScoreUpDown.Name = "uxScoreUpDown";
             this.uxScoreUpDown.Size = new System.Drawing.Size(229, 29);
             this.uxScoreUpDown.TabIndex = 4;
+            // 
+            // uxAddReviewButton
+            // 
+            this.uxAddReviewButton.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.uxAddReviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddReviewButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxAddReviewButton.Location = new System.Drawing.Point(39, 337);
+            this.uxAddReviewButton.Name = "uxAddReviewButton";
+            this.uxAddReviewButton.Size = new System.Drawing.Size(148, 56);
+            this.uxAddReviewButton.TabIndex = 5;
+            this.uxAddReviewButton.Text = "Add";
+            this.uxAddReviewButton.UseVisualStyleBackColor = false;
+            this.uxAddReviewButton.Click += new System.EventHandler(this.uxAddReviewButton_Click);
             // 
             // uxForm
             // 
@@ -594,6 +609,7 @@ namespace CIS560Project
         private System.Windows.Forms.Label uxUsernameLabel;
         private System.Windows.Forms.Label uxReviewMovieTitleLabel;
         private System.Windows.Forms.NumericUpDown uxScoreUpDown;
+        private System.Windows.Forms.Button uxAddReviewButton;
     }
 }
 

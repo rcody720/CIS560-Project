@@ -12,9 +12,9 @@ namespace CIS560Project.Models
 
         public int ReviewerId { get; }
 
-        public int Score { get; }
+        public double Score { get; }
 
-        public MovieReview(int movieId, int reviewerId, int score)
+        public MovieReview(int movieId, int reviewerId, double score)
         {
             this.MovieId = movieId;
             this.ReviewerId = reviewerId;
