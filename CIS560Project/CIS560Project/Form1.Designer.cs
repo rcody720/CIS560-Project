@@ -59,6 +59,8 @@ namespace CIS560Project
             this.uxMovieEarningsButton = new System.Windows.Forms.Button();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.uxDirectorLabel = new System.Windows.Forms.Label();
+            this.uxDirectorTextbox = new System.Windows.Forms.TextBox();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -117,9 +119,11 @@ namespace CIS560Project
             // 
             this.uxMoviesTab.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.uxMoviesTab.Controls.Add(this.uxGenreComboBox);
+            this.uxMoviesTab.Controls.Add(this.uxDirectorLabel);
             this.uxMoviesTab.Controls.Add(this.uxActorLabel);
             this.uxMoviesTab.Controls.Add(this.label2);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdLabel);
+            this.uxMoviesTab.Controls.Add(this.uxDirectorTextbox);
             this.uxMoviesTab.Controls.Add(this.uxActorTextbox);
             this.uxMoviesTab.Controls.Add(this.uxMovieIdTextbox);
             this.uxMoviesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -418,6 +422,25 @@ namespace CIS560Project
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
             // 
+            // uxDirectorLabel
+            // 
+            this.uxDirectorLabel.AutoSize = true;
+            this.uxDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxDirectorLabel.ForeColor = System.Drawing.Color.White;
+            this.uxDirectorLabel.Location = new System.Drawing.Point(31, 313);
+            this.uxDirectorLabel.Name = "uxDirectorLabel";
+            this.uxDirectorLabel.Size = new System.Drawing.Size(75, 24);
+            this.uxDirectorLabel.TabIndex = 1;
+            this.uxDirectorLabel.Text = "Director";
+            // 
+            // uxDirectorTextbox
+            // 
+            this.uxDirectorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxDirectorTextbox.Location = new System.Drawing.Point(34, 340);
+            this.uxDirectorTextbox.Name = "uxDirectorTextbox";
+            this.uxDirectorTextbox.Size = new System.Drawing.Size(191, 29);
+            this.uxDirectorTextbox.TabIndex = 0;
+            // 
             // uxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +500,8 @@ namespace CIS560Project
         private System.Windows.Forms.ComboBox uxGenreComboBox;
         private System.Windows.Forms.Label uxActorLabel;
         private System.Windows.Forms.TextBox uxActorTextbox;
+        private System.Windows.Forms.Label uxDirectorLabel;
+        private System.Windows.Forms.TextBox uxDirectorTextbox;
     }
 }
 

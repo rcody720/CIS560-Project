@@ -52,6 +52,7 @@
     <Compile Include="DataDelegates\GetEarningsRankingsBasedOnRuntimeDataDelegate.cs" />
     <Compile Include="DataDelegates\GetMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\GetMoviesByActorDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetMoviesByDirectorDataDelegate.cs" />
     <Compile Include="DataDelegates\GetMoviesByGenreDataDelegate.cs" />
     <Compile Include="DataDelegates\GetRecentMoviesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetShowingsDataDelegate.cs" />
@@ -121,6 +122,7 @@
     <Content Include="Sql\Movies.FetchMovie.sql" />
     <Content Include="Sql\Movies.GetMovie.sql" />
     <Content Include="Sql\Movies.GetMoviesByActor.sql" />
+    <Content Include="Sql\Movies.GetMoviesByDirector.sql" />
     <Content Include="Sql\Movies.GetMoviesByGenre.sql" />
     <Content Include="Sql\Movies.GetShowings.sql" />
     <Content Include="Sql\Movies.RetrieveMovies.sql" />

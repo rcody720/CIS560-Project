@@ -49,5 +49,7 @@ namespace CIS560Project
         IReadOnlyList<Movie> GetMovies(string genre);
 
         IReadOnlyList<Movie> GetMovies(string firstName, string lastName);
+
+        IReadOnlyList<Movie> FetchMovies(string firstName, string lastName);
     }
 }

@@ -88,5 +88,11 @@ namespace CIS560Project
             var d = new GetMoviesByActorDataDelegate(firstName, lastName);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Movie> FetchMovies(string firstName, string lastName)
+        {
+            var d = new GetMoviesByDirectorDataDelegate(firstName, lastName);
+            return executor.ExecuteReader(d);
+        }
     }
 }

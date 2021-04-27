@@ -55,6 +55,12 @@ namespace CIS560Project
                 IReadOnlyList<Movie> result = MovieRepo.GetMovies(actorName[0], actorName[1]);
                 DisplayMovies(result);
             }
+            else if (uxDirectorTextbox.Text != "")
+            {
+                string[] directorName = uxDirectorTextbox.Text.Split(' ');
+                IReadOnlyList<Movie> result = MovieRepo.GetMovies(directorName[0], directorName[1]);
+                DisplayMovies(result);
+            }
             else
             {
                 IReadOnlyList<Movie> result = MovieRepo.RetrieveMovies();
