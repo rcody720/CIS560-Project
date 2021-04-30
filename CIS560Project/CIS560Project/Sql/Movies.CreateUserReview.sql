@@ -9,21 +9,20 @@ AS
 WITH SourceCte(MovieID, ReviewerID, Score) AS 
 (
     SELECT M.MovieID, R.ReviewerID, @Score
-    FROM Movies.Reviewer R
-        INNER JOIN Movies.UserReviews UR ON R.ReviewerID = UR.ReviewerID
-        INNER JOIN Movies.Movie M ON M.MovieID = UR.MovieID
-    WHERE M.MovieTitle = @MovieTitle AND R.Username = @Username
+    FROM Movies.Movie M
+        INNER JOIN Movies.Reviewer R ON R.Username = @Username
+    WHERE M.MovieTitle = @MovieTitle
 )
 
-MERGE Movies.UserReviews T
+MERGE Movies.MovieReview T
 USING SourceCte S ON T.MovieID = S.MovieID AND T.ReviewerID = S.ReviewerID
 WHEN MATCHED THEN
     UPDATE
     SET 
-        Score = S.Score
+        Score = S.Score,
+        @MovieId = S.MovieID,
+        @ReviewerId = S.ReviewerID
 WHEN NOT MATCHED THEN
     INSERT(MovieID, ReviewerID, Score)
     VALUES(S.MovieID, S.ReviewerID, S.Score);
-    SET @MovieId = S.MovieID
-    SET @ReviewerID = S.ReviewerID
 GO

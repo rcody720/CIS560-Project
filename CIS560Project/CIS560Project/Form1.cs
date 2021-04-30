@@ -31,7 +31,7 @@ namespace CIS560Project
         }
 
         private void uxSearchButton_Click(object sender, EventArgs e)
-        {
+        { 
             if(uxSearchTextbox.Text != "")
             {
                 Movie result = MovieRepo.GetMovie(uxSearchTextbox.Text);
@@ -58,7 +58,7 @@ namespace CIS560Project
             else if (uxDirectorTextbox.Text != "")
             {
                 string[] directorName = uxDirectorTextbox.Text.Split(' ');
-                IReadOnlyList<Movie> result = MovieRepo.GetMovies(directorName[0], directorName[1]);
+                IReadOnlyList<Movie> result = MovieRepo.FetchMovies(directorName[0], directorName[1]);
                 DisplayMovies(result);
             }
             else
@@ -71,6 +71,7 @@ namespace CIS560Project
             uxMovieIdTextbox.Clear();
             uxGenreComboBox.SelectedItem = null;
             uxActorTextbox.Text = "";
+            uxDirectorTextbox.Text = "";
         }
 
         private void uxMovieEarningsButton_Click(object sender, EventArgs e)
@@ -141,8 +142,16 @@ namespace CIS560Project
 
         private void uxAddReviewButton_Click(object sender, EventArgs e)
         {
-            MovieRepo.CreateUserReview(uxUsernameTextbox.Text, uxReviewMovieTitleTextbox.Text, (double)uxScoreUpDown.Value);
-            uxTopTenListView.Clear();
+            try
+            {
+                uxTopTenListView.Items.Clear();
+                MovieRepo.CreateUserReview(uxUsernameTextbox.Text, uxReviewMovieTitleTextbox.Text, (double)uxScoreUpDown.Value);
+                uxTopTenListView.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Not yet implemented, try again later.");
+            }
         }
 
         private void DisplayMovie(Movie m)
