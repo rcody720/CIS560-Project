@@ -115,23 +115,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sql\Data.sql" />
-    <Content Include="Sql\Movies.CreateUserReview.sql" />
-    <Content Include="Sql\Movies.DirectorRatings.sql" />
-    <Content Include="Sql\DropTables.sql" />
-    <Content Include="Sql\Movies.EarningsRankingsBasedOnRuntime.sql" />
-    <Content Include="Sql\Movies.CreateMovie.sql" />
-    <Content Include="Sql\Movies.FetchMovie.sql" />
-    <Content Include="Sql\Movies.GetMovie.sql" />
-    <Content Include="Sql\Movies.GetMoviesByActor.sql" />
-    <Content Include="Sql\Movies.GetMoviesByDirector.sql" />
-    <Content Include="Sql\Movies.GetMoviesByGenre.sql" />
-    <Content Include="Sql\Movies.GetShowings.sql" />
-    <Content Include="Sql\Movies.RetrieveMovies.sql" />
-    <Content Include="Sql\Movies.GetRecentMovies.sql" />
-    <Content Include="Sql\Movies.sql" />
-    <Content Include="Sql\Tables.sql" />
-    <Content Include="Sql\Movies.TheaterSalesRank.sql" />
+    <Content Include="Sql\Data\Data.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateUserReview.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Movies.DirectorRatings.sql" />
+    <Content Include="Sql\Tables\DropTables.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Movies.EarningsRankingsBasedOnRuntime.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateMovie.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.FetchMovie.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.GetMovie.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.GetMoviesByActor.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.GetMoviesByDirector.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.GetMoviesByGenre.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.GetShowings.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.RetrieveMovies.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Movies.GetRecentMovies.sql" />
+    <Content Include="Sql\Tables\Movies.sql" />
+    <Content Include="Sql\Tables\Tables.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Movies.TheaterSalesRank.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
