@@ -1,3 +1,7 @@
+
+/*This procedure is responsible for finding the most popular directors according to the average scores of their directed movies,
+partitioning them by the number of movies they've directed.*/
+
 CREATE OR ALTER PROCEDURE Movies.DirectorRatings AS
 WITH DirectorRanks(DirectorId, Rating, NumMovies) AS
 (

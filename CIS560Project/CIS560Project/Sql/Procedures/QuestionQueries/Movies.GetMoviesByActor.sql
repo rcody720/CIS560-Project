@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding all the movies that the given actor is in.*/
+
 CREATE OR ALTER PROCEDURE Movies.GetMoviesByActor
 	@ActorFirst NVARCHAR(32),
 	@ActorLast NVARCHAR(32)

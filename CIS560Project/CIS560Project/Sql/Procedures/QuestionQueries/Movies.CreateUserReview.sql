@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for merging user reviews.*/
+
 CREATE OR ALTER PROCEDURE Movies.CreateUserReview
    @Score FLOAT,
    @MovieTitle NVARCHAR,

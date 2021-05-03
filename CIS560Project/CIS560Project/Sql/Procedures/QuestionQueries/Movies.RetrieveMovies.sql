@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for retrieving all of the movies in the database.*/
+
 CREATE OR ALTER PROCEDURE Movies.RetrieveMovies
 AS
 

@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding a movie with the given MovieId.*/
+
 CREATE OR ALTER PROCEDURE Movies.FetchMovie
    @MovieId INT
 AS

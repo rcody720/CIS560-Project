@@ -1,3 +1,6 @@
+
+/* This procedure is responsible for inserting a movie into the Movie table.*/
+
 CREATE OR ALTER PROCEDURE Movies.CreateMovie
    @MovieName NVARCHAR(32),
    @Rating NVARCHAR(32),

@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding all the movies that are directed by the given director*/
+
 CREATE OR ALTER PROCEDURE Movies.GetMoviesByDirector
 	@DirectorFirst NVARCHAR(32),
 	@DirectorLast NVARCHAR(32)

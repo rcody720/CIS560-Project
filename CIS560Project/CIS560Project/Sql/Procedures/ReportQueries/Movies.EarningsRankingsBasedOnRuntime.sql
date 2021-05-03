@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding the total earnings for each runtime category (less than 90, between 90 & 120, greater than 120).*/
+
 CREATE OR ALTER PROCEDURE Movies.EarningsRankingsBasedOnRuntime AS
 WITH TheaterSales(MovieId, TicketSales, MovieLength) AS
 (

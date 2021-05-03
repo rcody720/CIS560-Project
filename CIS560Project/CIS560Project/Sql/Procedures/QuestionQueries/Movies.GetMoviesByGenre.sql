@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding all the movies that are in a given genre.*/
+
 CREATE OR ALTER PROCEDURE Movies.GetMoviesByGenre
 	@Genre NVARCHAR
 AS

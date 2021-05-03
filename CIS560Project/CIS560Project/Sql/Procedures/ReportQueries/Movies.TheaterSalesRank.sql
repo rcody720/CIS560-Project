@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding the earnings for each movie for the time it was showing in theaters.*/
+
 CREATE OR ALTER PROCEDURE Movies.TheaterSalesRank AS
 WITH TicketsSold(MovieId, TicketSales) AS
 (

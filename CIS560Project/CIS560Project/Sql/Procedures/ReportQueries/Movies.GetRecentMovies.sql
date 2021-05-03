@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding the current highest scored movies.*/
+
 CREATE OR ALTER PROCEDURE Movies.GetRecentMovies AS
 WITH MovieRating(MovieId, UserScore) AS 
 (

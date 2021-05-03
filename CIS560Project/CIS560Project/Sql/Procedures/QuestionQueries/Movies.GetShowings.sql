@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding all the movie titles, theater names, and showtimes for a given date.*/
+
 CREATE OR ALTER PROCEDURE Movies.GetShowings 
     @Date DATE
 AS

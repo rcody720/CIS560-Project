@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for finding a movie with the given MovieName.*/
+
 CREATE OR ALTER PROCEDURE Movies.GetMovie
    @MovieName NVARCHAR(128)
 AS
