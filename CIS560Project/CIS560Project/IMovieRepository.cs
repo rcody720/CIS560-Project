@@ -51,5 +51,7 @@ namespace CIS560Project
         IReadOnlyList<Movie> GetMovies(string firstName, string lastName);
 
         IReadOnlyList<Movie> FetchMovies(string firstName, string lastName);
+
+        void CreateUserReview(string username, string movieTitle, double score);
     }
 }
