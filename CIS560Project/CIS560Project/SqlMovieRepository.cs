@@ -95,7 +95,7 @@ namespace CIS560Project
             return executor.ExecuteReader(d);
         }
 
-        public MovieReview CreateUserReview(string username, string movieTitle, double score)
+        public void CreateUserReview(string username, string movieTitle, double score)
         {
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(username));
@@ -106,8 +106,8 @@ namespace CIS560Project
             if (score == 0)
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(score));
 
-            var curdd = new CreateUserReviewDataDelegate(username, movieTitle, score);
-            return executor.ExecuteNonQuery(curdd);
+            var d = new CreateUserReviewDataDelegate(username, movieTitle, score);
+            executor.ExecuteNonQuery(d);
         }
     }
 }

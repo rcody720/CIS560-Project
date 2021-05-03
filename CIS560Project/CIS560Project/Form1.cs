@@ -135,9 +135,10 @@ namespace CIS560Project
                 MessageBox.Show("Invalid Input. Try again.");
             }
 
-            uxMovieTitleTextbox.Text = "";
-            uxRatingTextbox.Text = "";
-            uxRuntimeMinutesTextbox.Text = "";
+            uxMovieTitleTextbox.Clear();
+            uxRatingTextbox.Clear();
+            uxRuntimeMinutesTextbox.Clear();
+            uxReleaseDatePicker.ResetText(); //Trying this out to see if it resets the date picker
         }
 
         private void uxAddReviewButton_Click(object sender, EventArgs e)
@@ -146,7 +147,6 @@ namespace CIS560Project
             {
                 uxTopTenListView.Items.Clear();
                 MovieRepo.CreateUserReview(uxUsernameTextbox.Text, uxReviewMovieTitleTextbox.Text, (double)uxScoreUpDown.Value);
-                uxTopTenListView.Clear();
             }
             catch
             {

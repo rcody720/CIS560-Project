@@ -1,9 +1,7 @@
 CREATE OR ALTER PROCEDURE Movies.CreateUserReview
    @Score FLOAT,
    @MovieTitle NVARCHAR,
-   @Username NVARCHAR,
-   @MovieId INT OUTPUT,
-   @ReviewerId INT OUTPUT
+   @Username NVARCHAR
 AS
 
 WITH SourceCte(MovieID, ReviewerID, Score) AS 

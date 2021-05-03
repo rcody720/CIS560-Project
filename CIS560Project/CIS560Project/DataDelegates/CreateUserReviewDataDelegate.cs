@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
-    internal class CreateUserReviewDataDelegate : NonQueryDataDelegate<MovieReview>
+    internal class CreateUserReviewDataDelegate : DataDelegate
     {
         private readonly double Score;
         private readonly string Username;
@@ -44,9 +44,9 @@ namespace CIS560Project.DataDelegates
             p.Direction = ParameterDirection.Output;
         }
 
-        public override MovieReview Translate(SqlCommand command)
-        {
-            return new MovieReview((int)command.Parameters["MovieId"].Value, (int)command.Parameters["ReviewerId"].Value, Score);
-        }
+        //public override void Translate(SqlCommand command)
+        //{
+        //     new MovieReview((int)command.Parameters["MovieId"].Value, (int)command.Parameters["ReviewerId"].Value, Score);
+        //}
     }
 }
