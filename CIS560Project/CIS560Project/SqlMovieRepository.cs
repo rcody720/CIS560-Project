@@ -54,7 +54,7 @@ namespace CIS560Project
 
             var cmdd = new CreateMovieDataDelegate(movieName, rating, runTime, releaseDate);
             CreateDiretor(directorFirst, directorLast);
-            //CreateMovieDirector()
+            CreateMovieDirector();
 
             return executor.ExecuteNonQuery(cmdd);
 
@@ -206,6 +206,13 @@ namespace CIS560Project
         public void CreateDiretor(string directorFirst, string directorLast)
         {
             var d = new CreateDirectorDataDelegate(directorFirst, directorLast);
+            executor.ExecuteNonQuery(d);
+        }
+
+
+        public void CreateMovieDirector()
+        {
+            var d = new CreateMovieDirectorDataDelegate();
             executor.ExecuteNonQuery(d);
         }
     }

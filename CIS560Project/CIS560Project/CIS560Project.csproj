@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\CreateDirectorDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateMovieDirectorDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateReviewerDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateUserReviewDataDelegate.cs" />
