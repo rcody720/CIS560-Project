@@ -107,7 +107,7 @@ namespace CIS560Project
             this.uxTopTenListView.HideSelection = false;
             this.uxTopTenListView.Location = new System.Drawing.Point(559, 195);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(905, 528);
+            this.uxTopTenListView.Size = new System.Drawing.Size(835, 528);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -543,7 +543,7 @@ namespace CIS560Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(1476, 746);
+            this.ClientSize = new System.Drawing.Size(1407, 746);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxGenreLabel);
             this.Controls.Add(this.uxSearchTabControl);

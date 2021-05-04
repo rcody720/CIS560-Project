@@ -25,6 +25,8 @@ namespace CIS560Project
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0}    {1:F1}", item.Key.MovieName, item.Value);
                 uxTopTenListView.Items.Add(sb.ToString());
+                uxTopTenListView.Items.Add("");
+                uxTopTenListView.Items.Add("");
             }
             
             
@@ -83,6 +85,8 @@ namespace CIS560Project
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0} - {1:C2}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
                 uxTopTenListView.Items.Add(sb.ToString());
+                uxTopTenListView.Items.Add("");
+                uxTopTenListView.Items.Add("");
             }
         }
 
@@ -95,6 +99,8 @@ namespace CIS560Project
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0} {1}{2}", d.FirstName, d.LastName, Environment.NewLine);
                 uxTopTenListView.Items.Add(sb.ToString());
+                uxTopTenListView.Items.Add("");
+                uxTopTenListView.Items.Add("");
             }
         }
 
@@ -107,6 +113,8 @@ namespace CIS560Project
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0} - {1:C2}{2}", item.Key.ToString(), item.Value, Environment.NewLine);
                 uxTopTenListView.Items.Add(sb.ToString());
+                uxTopTenListView.Items.Add("");
+                uxTopTenListView.Items.Add("");
             }
         }
 
@@ -119,6 +127,8 @@ namespace CIS560Project
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("{0} - {1} : {2}", item.Item1, item.Item2.Item1, item.Item2.Item2);
                 uxTopTenListView.Items.Add(sb.ToString());
+                uxTopTenListView.Items.Add("");
+                uxTopTenListView.Items.Add("");
             }
         }
 
@@ -169,6 +179,7 @@ namespace CIS560Project
             {                
                 uxTopTenListView.Items.Add(string.Format("Movie: {0}    Rating: {1}    RunTime: {2}    ReleaseDate: {3}",
                 m.MovieName, m.Rating, m.RunTime.ToString(), m.ReleaseDate.ToShortDateString()));
+                uxTopTenListView.Items.Add("");
                 uxTopTenListView.Items.Add("");
             }
         }
