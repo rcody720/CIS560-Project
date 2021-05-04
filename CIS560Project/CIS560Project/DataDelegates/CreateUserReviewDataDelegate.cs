@@ -37,11 +37,11 @@ namespace CIS560Project.DataDelegates
             p = command.Parameters.Add("Score", SqlDbType.Float);
             p.Value = Score;
 
-            p = command.Parameters.Add("MovieId", SqlDbType.Int);
-            p.Direction = ParameterDirection.Output;
+            //p = command.Parameters.Add("MovieId", SqlDbType.Int);
+            //p.Direction = ParameterDirection.Output;
 
-            p = command.Parameters.Add("ReviewerId", SqlDbType.Int);
-            p.Direction = ParameterDirection.Output;
+            //p = command.Parameters.Add("ReviewerId", SqlDbType.Int);
+            //p.Direction = ParameterDirection.Output;
         }
 
         //public override void Translate(SqlCommand command)

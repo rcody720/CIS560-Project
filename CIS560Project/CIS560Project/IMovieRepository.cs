@@ -95,5 +95,11 @@ namespace CIS560Project
         /// <param name="movieTitle">Title of the movie being reviewed</param>
         /// <param name="score">The score the user is giving</param>
         void CreateUserReview(string username, string movieTitle, double score);
+
+        /// <summary>
+        /// Creates a new reviewer
+        /// </summary>
+        /// <param name="username">User leaving the review</param>
+        void CreateReviewer(string username);
     }
 }

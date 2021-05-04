@@ -176,7 +176,15 @@ namespace CIS560Project
             if (score == 0)
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(score));
 
-            var d = new CreateUserReviewDataDelegate(username, movieTitle, score);
+            CreateReviewer(username);
+
+            var d = new CreateUserReviewDataDelegate(movieTitle, username, score);
+            executor.ExecuteNonQuery(d);
+        }
+
+        public void CreateReviewer(string username)
+        {
+            var d = new CreateReviewerDataDelegate(username);
             executor.ExecuteNonQuery(d);
         }
     }
