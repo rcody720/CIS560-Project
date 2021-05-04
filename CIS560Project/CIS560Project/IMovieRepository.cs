@@ -101,5 +101,12 @@ namespace CIS560Project
         /// </summary>
         /// <param name="username">User leaving the review</param>
         void CreateReviewer(string username);
+
+        /// <summary>
+        /// Adds a Director to the database
+        /// </summary>
+        /// <param name="directorFirst">The director's first name</param>
+        /// <param name="directorLast">The director's last name</param>
+        void CreateDirector(string directorFirst, string directorLast);
     }
 }

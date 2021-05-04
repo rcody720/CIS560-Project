@@ -69,6 +69,8 @@ namespace CIS560Project
             this.uxReviewMovieTitleLabel = new System.Windows.Forms.Label();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.uxAddDirectorLabel = new System.Windows.Forms.Label();
+            this.uxAddDiretorTextbox = new System.Windows.Forms.TextBox();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -275,9 +277,11 @@ namespace CIS560Project
             this.uxAddMovieTab.BackColor = System.Drawing.Color.DimGray;
             this.uxAddMovieTab.Controls.Add(this.uxAddButton);
             this.uxAddMovieTab.Controls.Add(this.uxReleaseDatePicker);
+            this.uxAddMovieTab.Controls.Add(this.uxAddDiretorTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxRuntimeMinutesTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxRatingTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxMovieTitleTextbox);
+            this.uxAddMovieTab.Controls.Add(this.uxAddDirectorLabel);
             this.uxAddMovieTab.Controls.Add(this.uxReleaseDateLabel);
             this.uxAddMovieTab.Controls.Add(this.uxRuntimeMinutesLabel);
             this.uxAddMovieTab.Controls.Add(this.uxRatingLabel);
@@ -293,7 +297,7 @@ namespace CIS560Project
             this.uxAddButton.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.uxAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxAddButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxAddButton.Location = new System.Drawing.Point(23, 385);
+            this.uxAddButton.Location = new System.Drawing.Point(23, 442);
             this.uxAddButton.Name = "uxAddButton";
             this.uxAddButton.Size = new System.Drawing.Size(148, 56);
             this.uxAddButton.TabIndex = 3;
@@ -304,7 +308,7 @@ namespace CIS560Project
             // uxReleaseDatePicker
             // 
             this.uxReleaseDatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxReleaseDatePicker.Location = new System.Drawing.Point(23, 314);
+            this.uxReleaseDatePicker.Location = new System.Drawing.Point(23, 384);
             this.uxReleaseDatePicker.Name = "uxReleaseDatePicker";
             this.uxReleaseDatePicker.Size = new System.Drawing.Size(280, 26);
             this.uxReleaseDatePicker.TabIndex = 2;
@@ -312,7 +316,7 @@ namespace CIS560Project
             // uxRuntimeMinutesTextbox
             // 
             this.uxRuntimeMinutesTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxRuntimeMinutesTextbox.Location = new System.Drawing.Point(23, 227);
+            this.uxRuntimeMinutesTextbox.Location = new System.Drawing.Point(23, 214);
             this.uxRuntimeMinutesTextbox.Name = "uxRuntimeMinutesTextbox";
             this.uxRuntimeMinutesTextbox.Size = new System.Drawing.Size(229, 29);
             this.uxRuntimeMinutesTextbox.TabIndex = 1;
@@ -320,7 +324,7 @@ namespace CIS560Project
             // uxRatingTextbox
             // 
             this.uxRatingTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxRatingTextbox.Location = new System.Drawing.Point(23, 141);
+            this.uxRatingTextbox.Location = new System.Drawing.Point(23, 127);
             this.uxRatingTextbox.Name = "uxRatingTextbox";
             this.uxRatingTextbox.Size = new System.Drawing.Size(229, 29);
             this.uxRatingTextbox.TabIndex = 1;
@@ -328,7 +332,7 @@ namespace CIS560Project
             // uxMovieTitleTextbox
             // 
             this.uxMovieTitleTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMovieTitleTextbox.Location = new System.Drawing.Point(23, 57);
+            this.uxMovieTitleTextbox.Location = new System.Drawing.Point(23, 47);
             this.uxMovieTitleTextbox.Name = "uxMovieTitleTextbox";
             this.uxMovieTitleTextbox.Size = new System.Drawing.Size(229, 29);
             this.uxMovieTitleTextbox.TabIndex = 1;
@@ -338,7 +342,7 @@ namespace CIS560Project
             this.uxReleaseDateLabel.AutoSize = true;
             this.uxReleaseDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxReleaseDateLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxReleaseDateLabel.Location = new System.Drawing.Point(19, 287);
+            this.uxReleaseDateLabel.Location = new System.Drawing.Point(19, 357);
             this.uxReleaseDateLabel.Name = "uxReleaseDateLabel";
             this.uxReleaseDateLabel.Size = new System.Drawing.Size(127, 24);
             this.uxReleaseDateLabel.TabIndex = 0;
@@ -349,7 +353,7 @@ namespace CIS560Project
             this.uxRuntimeMinutesLabel.AutoSize = true;
             this.uxRuntimeMinutesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxRuntimeMinutesLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxRuntimeMinutesLabel.Location = new System.Drawing.Point(19, 200);
+            this.uxRuntimeMinutesLabel.Location = new System.Drawing.Point(19, 187);
             this.uxRuntimeMinutesLabel.Name = "uxRuntimeMinutesLabel";
             this.uxRuntimeMinutesLabel.Size = new System.Drawing.Size(188, 24);
             this.uxRuntimeMinutesLabel.TabIndex = 0;
@@ -360,7 +364,7 @@ namespace CIS560Project
             this.uxRatingLabel.AutoSize = true;
             this.uxRatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxRatingLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxRatingLabel.Location = new System.Drawing.Point(19, 114);
+            this.uxRatingLabel.Location = new System.Drawing.Point(19, 100);
             this.uxRatingLabel.Name = "uxRatingLabel";
             this.uxRatingLabel.Size = new System.Drawing.Size(68, 24);
             this.uxRatingLabel.TabIndex = 0;
@@ -371,7 +375,7 @@ namespace CIS560Project
             this.uxMovieTitleLabel.AutoSize = true;
             this.uxMovieTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxMovieTitleLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxMovieTitleLabel.Location = new System.Drawing.Point(19, 30);
+            this.uxMovieTitleLabel.Location = new System.Drawing.Point(19, 20);
             this.uxMovieTitleLabel.Name = "uxMovieTitleLabel";
             this.uxMovieTitleLabel.Size = new System.Drawing.Size(106, 24);
             this.uxMovieTitleLabel.TabIndex = 0;
@@ -538,6 +542,25 @@ namespace CIS560Project
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
             // 
+            // uxAddDirectorLabel
+            // 
+            this.uxAddDirectorLabel.AutoSize = true;
+            this.uxAddDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddDirectorLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxAddDirectorLabel.Location = new System.Drawing.Point(19, 276);
+            this.uxAddDirectorLabel.Name = "uxAddDirectorLabel";
+            this.uxAddDirectorLabel.Size = new System.Drawing.Size(80, 24);
+            this.uxAddDirectorLabel.TabIndex = 0;
+            this.uxAddDirectorLabel.Text = "Director:";
+            // 
+            // uxAddDiretorTextbox
+            // 
+            this.uxAddDiretorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddDiretorTextbox.Location = new System.Drawing.Point(23, 303);
+            this.uxAddDiretorTextbox.Name = "uxAddDiretorTextbox";
+            this.uxAddDiretorTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxAddDiretorTextbox.TabIndex = 1;
+            // 
             // uxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -610,6 +633,8 @@ namespace CIS560Project
         private System.Windows.Forms.Label uxReviewMovieTitleLabel;
         private System.Windows.Forms.NumericUpDown uxScoreUpDown;
         private System.Windows.Forms.Button uxAddReviewButton;
+        private System.Windows.Forms.TextBox uxAddDiretorTextbox;
+        private System.Windows.Forms.Label uxAddDirectorLabel;
     }
 }
 

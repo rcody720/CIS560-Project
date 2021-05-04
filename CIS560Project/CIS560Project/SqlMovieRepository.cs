@@ -35,7 +35,7 @@ namespace CIS560Project
         /// <param name="runTime">Run time of the movie in minutes.</param>
         /// <param name="releaseDate">Date the movie is released.</param>
         /// <returns>The resulting instance of Movie.</returns>
-        public Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate)
+        public Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast)
         {
             if (string.IsNullOrWhiteSpace(movieName))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(movieName));
@@ -46,7 +46,16 @@ namespace CIS560Project
             if (runTime == 0)
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(runTime));
 
+            if (string.IsNullOrWhiteSpace(directorFirst))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(directorFirst));
+
+            if (string.IsNullOrWhiteSpace(directorLast))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(directorLast));
+
             var cmdd = new CreateMovieDataDelegate(movieName, rating, runTime, releaseDate);
+            CreateDiretor(directorFirst, directorLast);
+            //CreateMovieDirector()
+
             return executor.ExecuteNonQuery(cmdd);
 
         }
@@ -173,18 +182,30 @@ namespace CIS560Project
             if (string.IsNullOrWhiteSpace(movieTitle))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(movieTitle));
 
-            if (score == 0)
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(score));
-
             CreateReviewer(username);
 
             var d = new CreateUserReviewDataDelegate(movieTitle, username, score);
             executor.ExecuteNonQuery(d);
         }
 
+        /// <summary>
+        /// Creates a new reviewer
+        /// </summary>
+        /// <param name="username">User leaving the review</param>
         public void CreateReviewer(string username)
         {
             var d = new CreateReviewerDataDelegate(username);
+            executor.ExecuteNonQuery(d);
+        }
+
+        /// <summary>
+        /// Adds a Director to the database
+        /// </summary>
+        /// <param name="directorFirst">The director's first name</param>
+        /// <param name="directorLast">The director's last name</param>
+        public void CreateDiretor(string directorFirst, string directorLast)
+        {
+            var d = new CreateDirectorDataDelegate(directorFirst, directorLast);
             executor.ExecuteNonQuery(d);
         }
     }

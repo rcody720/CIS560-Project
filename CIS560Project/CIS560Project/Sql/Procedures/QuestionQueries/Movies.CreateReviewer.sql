@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for inserting a reviewer they they make their first user review.*/
+
 CREATE OR ALTER PROCEDURE Movies.CreateReviewer
     @Username NVARCHAR(32)
 AS

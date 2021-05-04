@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\CreateDirectorDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateReviewerDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateUserReviewDataDelegate.cs" />
@@ -117,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Data.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateDirector.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateReviewer.sql" />
     <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateUserReview.sql" />
     <Content Include="Sql\Procedures\ReportQueries\Movies.DirectorRatings.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
