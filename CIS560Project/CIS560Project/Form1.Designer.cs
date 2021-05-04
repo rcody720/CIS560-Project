@@ -59,16 +59,16 @@ namespace CIS560Project
             this.uxTotalEarningsPerRuntimeGroupsButton = new System.Windows.Forms.Button();
             this.uxMostPopularDirectorsButton = new System.Windows.Forms.Button();
             this.uxMovieEarningsButton = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uxAddReviewButton = new System.Windows.Forms.Button();
+            this.uxScoreUpDown = new System.Windows.Forms.NumericUpDown();
+            this.uxUsernameTextbox = new System.Windows.Forms.TextBox();
+            this.uxReviewMovieTitleTextbox = new System.Windows.Forms.TextBox();
+            this.uxScoreLabel = new System.Windows.Forms.Label();
+            this.uxUsernameLabel = new System.Windows.Forms.Label();
+            this.uxReviewMovieTitleLabel = new System.Windows.Forms.Label();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.uxReviewMovieTitleTextbox = new System.Windows.Forms.TextBox();
-            this.uxReviewMovieTitleLabel = new System.Windows.Forms.Label();
-            this.uxUsernameLabel = new System.Windows.Forms.Label();
-            this.uxUsernameTextbox = new System.Windows.Forms.TextBox();
-            this.uxScoreLabel = new System.Windows.Forms.Label();
-            this.uxScoreUpDown = new System.Windows.Forms.NumericUpDown();
-            this.uxAddReviewButton = new System.Windows.Forms.Button();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -103,11 +103,11 @@ namespace CIS560Project
             // uxTopTenListView
             // 
             this.uxTopTenListView.BackColor = System.Drawing.Color.White;
-            this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxTopTenListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopTenListView.HideSelection = false;
             this.uxTopTenListView.Location = new System.Drawing.Point(559, 195);
             this.uxTopTenListView.Name = "uxTopTenListView";
-            this.uxTopTenListView.Size = new System.Drawing.Size(796, 528);
+            this.uxTopTenListView.Size = new System.Drawing.Size(905, 528);
             this.uxTopTenListView.TabIndex = 2;
             this.uxTopTenListView.UseCompatibleStateImageBehavior = false;
             this.uxTopTenListView.View = System.Windows.Forms.View.List;
@@ -430,6 +430,92 @@ namespace CIS560Project
             this.uxMovieEarningsButton.UseVisualStyleBackColor = false;
             this.uxMovieEarningsButton.Click += new System.EventHandler(this.uxMovieEarningsButton_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tabPage1.Controls.Add(this.uxAddReviewButton);
+            this.tabPage1.Controls.Add(this.uxScoreUpDown);
+            this.tabPage1.Controls.Add(this.uxUsernameTextbox);
+            this.tabPage1.Controls.Add(this.uxReviewMovieTitleTextbox);
+            this.tabPage1.Controls.Add(this.uxScoreLabel);
+            this.tabPage1.Controls.Add(this.uxUsernameLabel);
+            this.tabPage1.Controls.Add(this.uxReviewMovieTitleLabel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(518, 524);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Reviews";
+            // 
+            // uxAddReviewButton
+            // 
+            this.uxAddReviewButton.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.uxAddReviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddReviewButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxAddReviewButton.Location = new System.Drawing.Point(39, 337);
+            this.uxAddReviewButton.Name = "uxAddReviewButton";
+            this.uxAddReviewButton.Size = new System.Drawing.Size(148, 56);
+            this.uxAddReviewButton.TabIndex = 5;
+            this.uxAddReviewButton.Text = "Add";
+            this.uxAddReviewButton.UseVisualStyleBackColor = false;
+            this.uxAddReviewButton.Click += new System.EventHandler(this.uxAddReviewButton_Click);
+            // 
+            // uxScoreUpDown
+            // 
+            this.uxScoreUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxScoreUpDown.Location = new System.Drawing.Point(39, 263);
+            this.uxScoreUpDown.Name = "uxScoreUpDown";
+            this.uxScoreUpDown.Size = new System.Drawing.Size(229, 29);
+            this.uxScoreUpDown.TabIndex = 4;
+            // 
+            // uxUsernameTextbox
+            // 
+            this.uxUsernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUsernameTextbox.Location = new System.Drawing.Point(39, 69);
+            this.uxUsernameTextbox.Name = "uxUsernameTextbox";
+            this.uxUsernameTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxUsernameTextbox.TabIndex = 3;
+            // 
+            // uxReviewMovieTitleTextbox
+            // 
+            this.uxReviewMovieTitleTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxReviewMovieTitleTextbox.Location = new System.Drawing.Point(39, 164);
+            this.uxReviewMovieTitleTextbox.Name = "uxReviewMovieTitleTextbox";
+            this.uxReviewMovieTitleTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxReviewMovieTitleTextbox.TabIndex = 3;
+            // 
+            // uxScoreLabel
+            // 
+            this.uxScoreLabel.AutoSize = true;
+            this.uxScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxScoreLabel.Location = new System.Drawing.Point(35, 236);
+            this.uxScoreLabel.Name = "uxScoreLabel";
+            this.uxScoreLabel.Size = new System.Drawing.Size(128, 24);
+            this.uxScoreLabel.TabIndex = 2;
+            this.uxScoreLabel.Text = "Score (0 - 10):";
+            // 
+            // uxUsernameLabel
+            // 
+            this.uxUsernameLabel.AutoSize = true;
+            this.uxUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUsernameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxUsernameLabel.Location = new System.Drawing.Point(35, 42);
+            this.uxUsernameLabel.Name = "uxUsernameLabel";
+            this.uxUsernameLabel.Size = new System.Drawing.Size(102, 24);
+            this.uxUsernameLabel.TabIndex = 2;
+            this.uxUsernameLabel.Text = "Username:";
+            // 
+            // uxReviewMovieTitleLabel
+            // 
+            this.uxReviewMovieTitleLabel.AutoSize = true;
+            this.uxReviewMovieTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxReviewMovieTitleLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxReviewMovieTitleLabel.Location = new System.Drawing.Point(35, 137);
+            this.uxReviewMovieTitleLabel.Name = "uxReviewMovieTitleLabel";
+            this.uxReviewMovieTitleLabel.Size = new System.Drawing.Size(106, 24);
+            this.uxReviewMovieTitleLabel.TabIndex = 2;
+            this.uxReviewMovieTitleLabel.Text = "Movie Title:";
+            // 
             // uxGenreLabel
             // 
             this.uxGenreLabel.AutoSize = true;
@@ -452,98 +538,12 @@ namespace CIS560Project
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.tabPage1.Controls.Add(this.uxAddReviewButton);
-            this.tabPage1.Controls.Add(this.uxScoreUpDown);
-            this.tabPage1.Controls.Add(this.uxUsernameTextbox);
-            this.tabPage1.Controls.Add(this.uxReviewMovieTitleTextbox);
-            this.tabPage1.Controls.Add(this.uxScoreLabel);
-            this.tabPage1.Controls.Add(this.uxUsernameLabel);
-            this.tabPage1.Controls.Add(this.uxReviewMovieTitleLabel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(518, 524);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Reviews";
-            // 
-            // uxReviewMovieTitleTextbox
-            // 
-            this.uxReviewMovieTitleTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxReviewMovieTitleTextbox.Location = new System.Drawing.Point(39, 164);
-            this.uxReviewMovieTitleTextbox.Name = "uxReviewMovieTitleTextbox";
-            this.uxReviewMovieTitleTextbox.Size = new System.Drawing.Size(229, 29);
-            this.uxReviewMovieTitleTextbox.TabIndex = 3;
-            // 
-            // uxReviewMovieTitleLabel
-            // 
-            this.uxReviewMovieTitleLabel.AutoSize = true;
-            this.uxReviewMovieTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxReviewMovieTitleLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxReviewMovieTitleLabel.Location = new System.Drawing.Point(35, 137);
-            this.uxReviewMovieTitleLabel.Name = "uxReviewMovieTitleLabel";
-            this.uxReviewMovieTitleLabel.Size = new System.Drawing.Size(106, 24);
-            this.uxReviewMovieTitleLabel.TabIndex = 2;
-            this.uxReviewMovieTitleLabel.Text = "Movie Title:";
-            // 
-            // uxUsernameLabel
-            // 
-            this.uxUsernameLabel.AutoSize = true;
-            this.uxUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxUsernameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxUsernameLabel.Location = new System.Drawing.Point(35, 42);
-            this.uxUsernameLabel.Name = "uxUsernameLabel";
-            this.uxUsernameLabel.Size = new System.Drawing.Size(102, 24);
-            this.uxUsernameLabel.TabIndex = 2;
-            this.uxUsernameLabel.Text = "Username:";
-            // 
-            // uxUsernameTextbox
-            // 
-            this.uxUsernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxUsernameTextbox.Location = new System.Drawing.Point(39, 69);
-            this.uxUsernameTextbox.Name = "uxUsernameTextbox";
-            this.uxUsernameTextbox.Size = new System.Drawing.Size(229, 29);
-            this.uxUsernameTextbox.TabIndex = 3;
-            // 
-            // uxScoreLabel
-            // 
-            this.uxScoreLabel.AutoSize = true;
-            this.uxScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxScoreLabel.Location = new System.Drawing.Point(35, 236);
-            this.uxScoreLabel.Name = "uxScoreLabel";
-            this.uxScoreLabel.Size = new System.Drawing.Size(128, 24);
-            this.uxScoreLabel.TabIndex = 2;
-            this.uxScoreLabel.Text = "Score (0 - 10):";
-            // 
-            // uxScoreUpDown
-            // 
-            this.uxScoreUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxScoreUpDown.Location = new System.Drawing.Point(39, 263);
-            this.uxScoreUpDown.Name = "uxScoreUpDown";
-            this.uxScoreUpDown.Size = new System.Drawing.Size(229, 29);
-            this.uxScoreUpDown.TabIndex = 4;
-            // 
-            // uxAddReviewButton
-            // 
-            this.uxAddReviewButton.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.uxAddReviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAddReviewButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxAddReviewButton.Location = new System.Drawing.Point(39, 337);
-            this.uxAddReviewButton.Name = "uxAddReviewButton";
-            this.uxAddReviewButton.Size = new System.Drawing.Size(148, 56);
-            this.uxAddReviewButton.TabIndex = 5;
-            this.uxAddReviewButton.Text = "Add";
-            this.uxAddReviewButton.UseVisualStyleBackColor = false;
-            this.uxAddReviewButton.Click += new System.EventHandler(this.uxAddReviewButton_Click);
-            // 
             // uxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(1365, 746);
+            this.ClientSize = new System.Drawing.Size(1476, 746);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxGenreLabel);
             this.Controls.Add(this.uxSearchTabControl);

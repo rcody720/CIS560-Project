@@ -150,7 +150,7 @@ namespace CIS560Project
             }
             catch
             {
-                MessageBox.Show("Not yet implemented, try again later.");
+                MessageBox.Show("Invalid Input. Try again.");
             }
         }
 
