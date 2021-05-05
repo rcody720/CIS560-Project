@@ -35,7 +35,7 @@ namespace CIS560Project
         /// <param name="runTime">Run time of the movie in minutes.</param>
         /// <param name="releaseDate">Date the movie is released.</param>
         /// <returns>The resulting instance of Movie.</returns>
-        public Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast)
+        public Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast, double directorSalary)
         {
             if (string.IsNullOrWhiteSpace(movieName))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(movieName));
@@ -54,7 +54,7 @@ namespace CIS560Project
 
             var cmdd = new CreateMovieDataDelegate(movieName, rating, runTime, releaseDate);
             CreateDirector(directorFirst, directorLast);
-            CreateMovieDirector();
+            CreateMovieDirector(directorFirst, directorLast, directorSalary, movieName);
 
             return executor.ExecuteNonQuery(cmdd);
 
@@ -209,10 +209,16 @@ namespace CIS560Project
             executor.ExecuteNonQuery(d);
         }
 
-
-        public void CreateMovieDirector()
+        /// <summary>
+        /// Creates a new MovieDirector
+        /// </summary>
+        /// <param name="directorFirst">The director's first name</param>
+        /// <param name="directorLast">The director's last name</param>
+        /// <param name="directorSalary">The director's salary</param>
+        /// <param name="movieTitle">The title of the movie this director directed</param>
+        public void CreateMovieDirector(string directorFirst, string directorLast, double directorSalary, string movieTitle)
         {
-            var d = new CreateMovieDirectorDataDelegate();
+            var d = new CreateMovieDirectorDataDelegate(directorFirst, directorLast, directorSalary, movieTitle);
             executor.ExecuteNonQuery(d);
         }
     }

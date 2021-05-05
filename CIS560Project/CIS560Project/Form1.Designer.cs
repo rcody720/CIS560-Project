@@ -48,9 +48,11 @@ namespace CIS560Project
             this.uxAddMovieTab = new System.Windows.Forms.TabPage();
             this.uxAddButton = new System.Windows.Forms.Button();
             this.uxReleaseDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.uxAddDiretorTextbox = new System.Windows.Forms.TextBox();
             this.uxRuntimeMinutesTextbox = new System.Windows.Forms.TextBox();
             this.uxRatingTextbox = new System.Windows.Forms.TextBox();
             this.uxMovieTitleTextbox = new System.Windows.Forms.TextBox();
+            this.uxAddDirectorLabel = new System.Windows.Forms.Label();
             this.uxReleaseDateLabel = new System.Windows.Forms.Label();
             this.uxRuntimeMinutesLabel = new System.Windows.Forms.Label();
             this.uxRatingLabel = new System.Windows.Forms.Label();
@@ -69,8 +71,8 @@ namespace CIS560Project
             this.uxReviewMovieTitleLabel = new System.Windows.Forms.Label();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uxAddDirectorLabel = new System.Windows.Forms.Label();
-            this.uxAddDiretorTextbox = new System.Windows.Forms.TextBox();
+            this.uxSalaryLabel = new System.Windows.Forms.Label();
+            this.uxAddSalaryUpDown = new System.Windows.Forms.NumericUpDown();
             this.uxSearchTabControl.SuspendLayout();
             this.uxMoviesTab.SuspendLayout();
             this.uxTheatersTab.SuspendLayout();
@@ -78,6 +80,7 @@ namespace CIS560Project
             this.uxMovieStatsTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxScoreUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxAddSalaryUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // uxSearchTextbox
@@ -275,12 +278,14 @@ namespace CIS560Project
             // uxAddMovieTab
             // 
             this.uxAddMovieTab.BackColor = System.Drawing.Color.DimGray;
+            this.uxAddMovieTab.Controls.Add(this.uxAddSalaryUpDown);
             this.uxAddMovieTab.Controls.Add(this.uxAddButton);
             this.uxAddMovieTab.Controls.Add(this.uxReleaseDatePicker);
             this.uxAddMovieTab.Controls.Add(this.uxAddDiretorTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxRuntimeMinutesTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxRatingTextbox);
             this.uxAddMovieTab.Controls.Add(this.uxMovieTitleTextbox);
+            this.uxAddMovieTab.Controls.Add(this.uxSalaryLabel);
             this.uxAddMovieTab.Controls.Add(this.uxAddDirectorLabel);
             this.uxAddMovieTab.Controls.Add(this.uxReleaseDateLabel);
             this.uxAddMovieTab.Controls.Add(this.uxRuntimeMinutesLabel);
@@ -313,6 +318,14 @@ namespace CIS560Project
             this.uxReleaseDatePicker.Size = new System.Drawing.Size(280, 26);
             this.uxReleaseDatePicker.TabIndex = 2;
             // 
+            // uxAddDiretorTextbox
+            // 
+            this.uxAddDiretorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddDiretorTextbox.Location = new System.Drawing.Point(23, 298);
+            this.uxAddDiretorTextbox.Name = "uxAddDiretorTextbox";
+            this.uxAddDiretorTextbox.Size = new System.Drawing.Size(229, 29);
+            this.uxAddDiretorTextbox.TabIndex = 1;
+            // 
             // uxRuntimeMinutesTextbox
             // 
             this.uxRuntimeMinutesTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,6 +349,17 @@ namespace CIS560Project
             this.uxMovieTitleTextbox.Name = "uxMovieTitleTextbox";
             this.uxMovieTitleTextbox.Size = new System.Drawing.Size(229, 29);
             this.uxMovieTitleTextbox.TabIndex = 1;
+            // 
+            // uxAddDirectorLabel
+            // 
+            this.uxAddDirectorLabel.AutoSize = true;
+            this.uxAddDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddDirectorLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxAddDirectorLabel.Location = new System.Drawing.Point(19, 271);
+            this.uxAddDirectorLabel.Name = "uxAddDirectorLabel";
+            this.uxAddDirectorLabel.Size = new System.Drawing.Size(80, 24);
+            this.uxAddDirectorLabel.TabIndex = 0;
+            this.uxAddDirectorLabel.Text = "Director:";
             // 
             // uxReleaseDateLabel
             // 
@@ -542,24 +566,36 @@ namespace CIS560Project
             this.label1.TabIndex = 6;
             this.label1.Text = "Output:";
             // 
-            // uxAddDirectorLabel
+            // uxSalaryLabel
             // 
-            this.uxAddDirectorLabel.AutoSize = true;
-            this.uxAddDirectorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAddDirectorLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.uxAddDirectorLabel.Location = new System.Drawing.Point(19, 276);
-            this.uxAddDirectorLabel.Name = "uxAddDirectorLabel";
-            this.uxAddDirectorLabel.Size = new System.Drawing.Size(80, 24);
-            this.uxAddDirectorLabel.TabIndex = 0;
-            this.uxAddDirectorLabel.Text = "Director:";
+            this.uxSalaryLabel.AutoSize = true;
+            this.uxSalaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSalaryLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.uxSalaryLabel.Location = new System.Drawing.Point(289, 271);
+            this.uxSalaryLabel.Name = "uxSalaryLabel";
+            this.uxSalaryLabel.Size = new System.Drawing.Size(66, 24);
+            this.uxSalaryLabel.TabIndex = 0;
+            this.uxSalaryLabel.Text = "Salary:";
             // 
-            // uxAddDiretorTextbox
+            // uxAddSalaryUpDown
             // 
-            this.uxAddDiretorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAddDiretorTextbox.Location = new System.Drawing.Point(23, 303);
-            this.uxAddDiretorTextbox.Name = "uxAddDiretorTextbox";
-            this.uxAddDiretorTextbox.Size = new System.Drawing.Size(229, 29);
-            this.uxAddDiretorTextbox.TabIndex = 1;
+            this.uxAddSalaryUpDown.DecimalPlaces = 2;
+            this.uxAddSalaryUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxAddSalaryUpDown.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.uxAddSalaryUpDown.InterceptArrowKeys = false;
+            this.uxAddSalaryUpDown.Location = new System.Drawing.Point(293, 298);
+            this.uxAddSalaryUpDown.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.uxAddSalaryUpDown.Name = "uxAddSalaryUpDown";
+            this.uxAddSalaryUpDown.Size = new System.Drawing.Size(138, 29);
+            this.uxAddSalaryUpDown.TabIndex = 4;
             // 
             // uxForm
             // 
@@ -586,6 +622,7 @@ namespace CIS560Project
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxScoreUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxAddSalaryUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,6 +672,8 @@ namespace CIS560Project
         private System.Windows.Forms.Button uxAddReviewButton;
         private System.Windows.Forms.TextBox uxAddDiretorTextbox;
         private System.Windows.Forms.Label uxAddDirectorLabel;
+        private System.Windows.Forms.NumericUpDown uxAddSalaryUpDown;
+        private System.Windows.Forms.Label uxSalaryLabel;
     }
 }
 

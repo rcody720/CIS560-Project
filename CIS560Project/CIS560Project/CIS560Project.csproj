@@ -120,6 +120,7 @@
   <ItemGroup>
     <Content Include="Sql\Data\Data.sql" />
     <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateDirector.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateMovieDirector.sql" />
     <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateReviewer.sql" />
     <Content Include="Sql\Procedures\QuestionQueries\Movies.CreateUserReview.sql" />
     <Content Include="Sql\Procedures\ReportQueries\Movies.DirectorRatings.sql" />

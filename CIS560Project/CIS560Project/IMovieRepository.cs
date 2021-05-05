@@ -38,7 +38,7 @@ namespace CIS560Project
         /// <param name="runTime">Run time of the movie in minutes.</param>
         /// <param name="releaseDate">Date the movie is released.</param>
         /// <returns>The resulting instance of Movie.</returns>
-        Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast);
+        Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast, double directorSalary);
 
         /// <summary>
         /// Gets the movies in order of current top scored
@@ -103,10 +103,19 @@ namespace CIS560Project
         void CreateReviewer(string username);
 
         /// <summary>
-        /// Adds a Director to the database
+        /// Creates a new Director 
         /// </summary>
         /// <param name="directorFirst">The director's first name</param>
         /// <param name="directorLast">The director's last name</param>
         void CreateDirector(string directorFirst, string directorLast);
+
+        /// <summary>
+        /// Creates a new MovieDirector
+        /// </summary>
+        /// <param name="directorFirst">The director's first name</param>
+        /// <param name="directorLast">The director's last name</param>
+        /// <param name="directorSalary">The director's salary</param>
+        /// <param name="movieTitle">The title of the movie this director directed</param>
+        void CreateMovieDirector(string directorFirst, string directorLast, double directorSalary, string movieTitle);
     }
 }

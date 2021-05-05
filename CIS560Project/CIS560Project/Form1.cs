@@ -137,7 +137,7 @@ namespace CIS560Project
             try
             {
                 string[] directorName = uxAddDiretorTextbox.Text.Split(' ');
-                Movie result = MovieRepo.CreateMovie(uxMovieTitleTextbox.Text, uxRatingTextbox.Text, Convert.ToInt32(uxRuntimeMinutesTextbox.Text), uxReleaseDatePicker.Value, directorName[0], directorName[1]);
+                Movie result = MovieRepo.CreateMovie(uxMovieTitleTextbox.Text, uxRatingTextbox.Text, Convert.ToInt32(uxRuntimeMinutesTextbox.Text), uxReleaseDatePicker.Value, directorName[0], directorName[1], Convert.ToDouble(uxAddSalaryUpDown.Value));
                 uxTopTenListView.Items.Clear();
                 uxTopTenListView.Items.Add(string.Format("{0}  {1}  {2}  {3}", result.MovieName, result.Rating, result.RunTime.ToString(), result.ReleaseDate.ToShortDateString()));
             }
