@@ -11,7 +11,8 @@ namespace CIS560Project.DataDelegates
 {
     internal class CreateMovieDirectorDataDelegate : DataDelegate
     {
-        public CreateDirectorDataDelegate()
+        public CreateMovieDirectorDataDelegate()
+            : base("Movies.CreateMovieDirector")
         {
 
         }
@@ -19,7 +20,6 @@ namespace CIS560Project.DataDelegates
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
-
 
         }
     }
