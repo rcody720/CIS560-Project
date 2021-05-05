@@ -38,7 +38,7 @@ namespace CIS560Project
         /// <param name="runTime">Run time of the movie in minutes.</param>
         /// <param name="releaseDate">Date the movie is released.</param>
         /// <returns>The resulting instance of Movie.</returns>
-        Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate);
+        Movie CreateMovie(string movieName, string rating, int runTime, DateTime releaseDate, string directorFirst, string directorLast);
 
         /// <summary>
         /// Gets the movies in order of current top scored

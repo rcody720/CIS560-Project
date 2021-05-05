@@ -53,7 +53,7 @@ namespace CIS560Project
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(directorLast));
 
             var cmdd = new CreateMovieDataDelegate(movieName, rating, runTime, releaseDate);
-            CreateDiretor(directorFirst, directorLast);
+            CreateDirector(directorFirst, directorLast);
             CreateMovieDirector();
 
             return executor.ExecuteNonQuery(cmdd);
@@ -203,7 +203,7 @@ namespace CIS560Project
         /// </summary>
         /// <param name="directorFirst">The director's first name</param>
         /// <param name="directorLast">The director's last name</param>
-        public void CreateDiretor(string directorFirst, string directorLast)
+        public void CreateDirector(string directorFirst, string directorLast)
         {
             var d = new CreateDirectorDataDelegate(directorFirst, directorLast);
             executor.ExecuteNonQuery(d);
