@@ -1,3 +1,6 @@
+
+/*This procedure is responsible for inserting a director*/
+
 CREATE OR ALTER PROCEDURE Movies.CreateDirector
 	@DirectorFirst NVARCHAR(32),
 	@DirectorLast NVARCHAR(32)
