@@ -12,6 +12,11 @@ namespace CIS560Project.Models
 
         public string UserName { get; }
 
+        /// <summary>
+        /// Reviewer constructor
+        /// </summary>
+        /// <param name="reviewerId"></param>
+        /// <param name="userName"></param>
         public Reviewer(int reviewerId, string userName)
         {
             this.ReviewerId = reviewerId;

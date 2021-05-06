@@ -17,6 +17,14 @@ namespace CIS560Project.Models
 
         public DateTime ReleaseDate { get; }
 
+        /// <summary>
+        /// Movie constructor
+        /// </summary>
+        /// <param name="movieid"></param>
+        /// <param name="movieName"></param>
+        /// <param name="rating"></param>
+        /// <param name="runTime"></param>
+        /// <param name="releaseDate"></param>
         public Movie(int movieid, string movieName, string rating, int runTime, DateTime releaseDate)
         {
             this.MovieId = movieid;

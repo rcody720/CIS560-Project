@@ -9,6 +9,10 @@ namespace CIS560Project
 {
     public interface IDirectorRepository
     {
+        /// <summary>
+        /// retrieves all director from the database
+        /// </summary>
+        /// <returns></returns>
         IReadOnlyList<Director> GetDirectorRatings();
     }
 }

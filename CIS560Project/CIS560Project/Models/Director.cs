@@ -12,6 +12,12 @@ namespace CIS560Project.Models
         public string FirstName { get; }
         public string LastName { get; }
 
+        /// <summary>
+        /// constructor for Directors
+        /// </summary>
+        /// <param name="directorid"></param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
         public Director(int directorid, string firstName, string lastName)
         {
             this.DirectorId = directorid;

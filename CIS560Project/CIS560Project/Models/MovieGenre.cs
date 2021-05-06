@@ -12,6 +12,11 @@ namespace CIS560Project.Models
 
         public int GenreId { get; }
 
+        /// <summary>
+        /// MovieGenre constructor
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <param name="genreId"></param>
         public MovieGenre(int movieId, int genreId)
         {
             this.MovieId = movieId;

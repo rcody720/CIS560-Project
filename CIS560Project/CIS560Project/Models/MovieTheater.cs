@@ -20,6 +20,15 @@ namespace CIS560Project.Models
 
         public DateTime ShowingToDate { get; }
 
+        /// <summary>
+        /// MovieTheater constructor
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <param name="theaterId"></param>
+        /// <param name="ticketsSold"></param>
+        /// <param name="showTimes"></param>
+        /// <param name="showingFromDate"></param>
+        /// <param name="showingToDate"></param>
         public MovieTheater(int movieId, int theaterId, int ticketsSold, string showTimes, DateTime showingFromDate, DateTime showingToDate)
         {
             this.MovieId = movieId;

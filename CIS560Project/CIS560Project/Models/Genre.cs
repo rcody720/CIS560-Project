@@ -10,6 +10,9 @@ namespace CIS560Project.Models
     {
         public int GenreId { get; }
 
+        /// <summary>
+        /// enum of included genres
+        /// </summary>
         public enum GenreName
         {
             Action,
@@ -30,6 +33,11 @@ namespace CIS560Project.Models
 
         public GenreName Genrename { get; }
 
+        /// <summary>
+        /// genre constructor
+        /// </summary>
+        /// <param name="genreId"></param>
+        /// <param name="genreName"></param>
         public Genre(int genreId, GenreName genreName)
         {
             this.GenreId = genreId;
