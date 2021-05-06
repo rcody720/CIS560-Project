@@ -149,7 +149,9 @@ namespace CIS560Project
             uxMovieTitleTextbox.Clear();
             uxRatingTextbox.Clear();
             uxRuntimeMinutesTextbox.Clear();
-            uxReleaseDatePicker.ResetText(); //Trying this out to see if it resets the date picker
+            uxAddDiretorTextbox.Clear();
+            uxAddSalaryUpDown.ResetText();
+            uxReleaseDatePicker.ResetText();
         }
 
         private void uxAddReviewButton_Click(object sender, EventArgs e)
