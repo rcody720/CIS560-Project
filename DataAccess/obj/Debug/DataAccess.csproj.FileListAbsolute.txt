@@ -31,3 +31,4 @@ C:\Users\rcody720\Source\Repos\CIS560-Project\DataAccess\obj\Debug\DataAccess.cs
 C:\Users\rcody720\Source\Repos\CIS560-Project\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\rcody720\Source\Repos\CIS560-Project\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\rcody720\Source\Repos\CIS560-Project\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Tayler\Desktop\College Work\CIS 560\FinalProject\CIS560-Project\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
