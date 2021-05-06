@@ -14,11 +14,19 @@ namespace CIS560Project
     {
         private readonly SqlCommandExecutor executor;
 
+        /// <summary>
+        /// sqlDirectiryRepository constructor
+        /// </summary>
+        /// <param name="connectionString"></param>
         public SqlDirectorRepository(string connectionString)
         {
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        /// <summary>
+        /// retrieves all director from database
+        /// </summary>
+        /// <returns></returns>
         public IReadOnlyList<Director> GetDirectorRatings()
         {
             var d = new GetDirectorRatings();

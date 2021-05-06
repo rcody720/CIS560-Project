@@ -14,6 +14,12 @@ namespace CIS560Project.Models
 
         public double Salary { get; }
 
+        /// <summary>
+        /// MovieDIrector constructor
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <param name="actorId"></param>
+        /// <param name="salary"></param>
         public MovieDirector(int movieId, int actorId, double salary)
         {
             this.MovieId = movieId;

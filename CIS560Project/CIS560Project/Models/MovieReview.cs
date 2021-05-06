@@ -14,6 +14,12 @@ namespace CIS560Project.Models
 
         public double Score { get; }
 
+        /// <summary>
+        /// MovieReview constructor
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <param name="reviewerId"></param>
+        /// <param name="score"></param>
         public MovieReview(int movieId, int reviewerId, double score)
         {
             this.MovieId = movieId;
