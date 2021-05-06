@@ -106,7 +106,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RebuildDatabase.ps1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,12 +9,24 @@ using System.Data;
 
 namespace CIS560Project.DataDelegates
 {
+    /// <summary>
+    /// CreateMovieDirectorDataDelegate.cs is a delegate that handles
+    /// interacting with the Movies.CreateMovieDirector sql procedure.
+    /// </summary>
     internal class CreateMovieDirectorDataDelegate : DataDelegate
     {
         private string DirectorFirst;
         private string DirectorLast;
         private double DirectorSalary;
         private string MovieTitle;
+
+        /// <summary>
+        /// Constructor for the class
+        /// </summary>
+        /// <param name="directorFirst">Director's first name</param>
+        /// <param name="directorLast">Director's last name</param>
+        /// <param name="directorSalary">The director's salary</param>
+        /// <param name="movieTitle">The title of the movie</param>
         public CreateMovieDirectorDataDelegate(string directorFirst, string directorLast, double directorSalary, string movieTitle)
             : base("Movies.CreateMovieDirector")
         {
@@ -24,6 +36,10 @@ namespace CIS560Project.DataDelegates
             this.MovieTitle = movieTitle;
         }
 
+        /// <summary>
+        /// Method to add parameters to the command.
+        /// </summary>
+        /// <param name="command">Sql command</param>
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);

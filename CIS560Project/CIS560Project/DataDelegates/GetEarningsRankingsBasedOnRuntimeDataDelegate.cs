@@ -9,14 +9,28 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
+    /// <summary>
+    /// GetEarningsRankingsBasedOnRuntimeDataDelegate.cs is a delegate that handles
+    /// interacting with the Movies.GetEarningsRankingsBasedOnRuntime sql procedure.
+    /// </summary>
     internal class GetEarningsRankingsBasedOnRuntimeDataDelegate : DataReaderDelegate<Dictionary<string, double>>
     {
+        /// <summary>
+        /// Constructor for the class
+        /// </summary>
         public GetEarningsRankingsBasedOnRuntimeDataDelegate()
             : base("Movies.EarningsRankingsBasedOnRuntime")
         {
 
         }
 
+        /// <summary>
+        /// Method to create the objects with the information
+        /// returned from the sql procedure
+        /// </summary>
+        /// <param name="command">The Sql command</param>
+        /// <param name="reader">The data row reader</param>
+        /// <returns>A dictionary with the category of runtime as key and the earnings as the value</returns>
         public override Dictionary<string, double> Translate(SqlCommand command, IDataRowReader reader)
         {
             var movies = new Dictionary<string, double>();

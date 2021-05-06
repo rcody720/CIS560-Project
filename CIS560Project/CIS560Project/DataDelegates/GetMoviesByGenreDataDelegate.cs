@@ -10,16 +10,28 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
+    /// <summary>
+    /// GetMoviesByGenreDataDelegate.cs is a delegate that handles
+    /// interacting with the Movies.GetMoviesByGenre sql procedure.
+    /// </summary>
     internal class GetMoviesByGenreDataDelegate : DataReaderDelegate<IReadOnlyList<Movie>>
     {
         private readonly string Genre;
 
+        /// <summary>
+        /// Constructor for the class
+        /// </summary>
+        /// <param name="genre">The genre of movie being searched for</param>
         public GetMoviesByGenreDataDelegate(string genre)
             : base("Movies.GetMoviesByGenre")
         {
             this.Genre = genre;
         }
 
+        /// <summary>
+        /// Method to add parameters to the command.
+        /// </summary>
+        /// <param name="command">Sql command</param>
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
@@ -28,6 +40,13 @@ namespace CIS560Project.DataDelegates
             p.Value = Genre;
         }
 
+        /// <summary>
+        /// Method to create the objects with the information 
+        /// returned from the sql procedure.
+        /// </summary>
+        /// <param name="command">The Sql command</param>
+        /// <param name="reader">The data row reader</param>
+        /// <returns>The list of movies in the specified genre</returns>
         public override IReadOnlyList<Movie> Translate(SqlCommand command, IDataRowReader reader)
         {
             var movies = new List<Movie>();

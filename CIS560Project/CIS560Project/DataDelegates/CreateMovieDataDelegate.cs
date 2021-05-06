@@ -10,6 +10,10 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
+    /// <summary>
+    /// CreateMovieDataDelegate.cs is a delegate that handles
+    /// interacting with the Movies.CreateMovie sql procedure.
+    /// </summary>
     internal class CreateMovieDataDelegate : NonQueryDataDelegate<Movie>
     {
         private readonly string MovieName;
@@ -17,6 +21,13 @@ namespace CIS560Project.DataDelegates
         private readonly int RunTime;
         private readonly DateTime ReleaseDate;
 
+        /// <summary>
+        /// Constructor for the class
+        /// </summary>
+        /// <param name="movieName">The movie title</param>
+        /// <param name="rating">The rating of the movie</param>
+        /// <param name="runTime">The movie's runtime</param>
+        /// <param name="releaseDate">The release date of the movie</param>
         public CreateMovieDataDelegate(string movieName, string rating, int runTime, DateTime releaseDate)
             : base("Movies.CreateMovie")
         {
@@ -26,6 +37,10 @@ namespace CIS560Project.DataDelegates
             this.ReleaseDate = releaseDate;
         }
 
+        /// <summary>
+        /// Method to add parameters to the command.
+        /// </summary>
+        /// <param name="command">Sql command</param>
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
@@ -46,6 +61,12 @@ namespace CIS560Project.DataDelegates
             p.Direction = ParameterDirection.Output;
         }
 
+        /// <summary>
+        /// Method to create the objects with the information 
+        /// returned from the sql procedure.
+        /// </summary>
+        /// <param name="command">The Sql command</param>
+        /// <returns>The movie created</returns>
         public override Movie Translate(SqlCommand command)
         {
             return new Movie((int)command.Parameters["MovieId"].Value, MovieName, Rating, RunTime, ReleaseDate);
